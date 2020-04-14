@@ -80,6 +80,12 @@
     <Compile Include="tacGia.Designer.cs">
       <DependentUpon>tacGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="thanhVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="thanhVien.Designer.cs">
+      <DependentUpon>thanhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="thuvien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </Compile>
     <EmbeddedResource Include="tacGia.resx">
       <DependentUpon>tacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="thanhVien.resx">
+      <DependentUpon>thanhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="thuvien.resx">
       <DependentUpon>thuvien.cs</DependentUpon>

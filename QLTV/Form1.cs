@@ -130,6 +130,10 @@ namespace QLTV
         }
         private void btn_ThemMoiThanhVien_click(object sender, EventArgs e)
         {
+            this.panelMain.Controls.Clear();
+            thanhVien tv = new thanhVien();
+            this.panelMain.Controls.Add(tv);
+            tv.Show();
             hidebutton();
         }
 

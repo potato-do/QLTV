@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSider = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -52,7 +52,6 @@
             this.btnNXB = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnTacGia = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnKeSach = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnThuVien = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,8 +61,9 @@
             this.btnCloseM = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnOpenM = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.transpanelMenu = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.transpanelMenu = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.btnThuVien = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panelSider.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -584,43 +584,6 @@
             this.btnKeSach.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKeSach.Click += new System.EventHandler(this.btn_ThemMoiThuVien_click);
             // 
-            // btnThuVien
-            // 
-            this.btnThuVien.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThuVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThuVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThuVien.BorderRadius = 0;
-            this.btnThuVien.ButtonText = "Thư viện";
-            this.btnThuVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.transpanelMenu.SetDecoration(this.btnThuVien, BunifuAnimatorNS.DecorationType.None);
-            this.btnThuVien.DisabledColor = System.Drawing.Color.Gray;
-            this.btnThuVien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThuVien.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnThuVien.Iconimage = null;
-            this.btnThuVien.Iconimage_right = null;
-            this.btnThuVien.Iconimage_right_Selected = null;
-            this.btnThuVien.Iconimage_Selected = null;
-            this.btnThuVien.IconMarginLeft = 10;
-            this.btnThuVien.IconMarginRight = 0;
-            this.btnThuVien.IconRightVisible = true;
-            this.btnThuVien.IconRightZoom = 0D;
-            this.btnThuVien.IconVisible = true;
-            this.btnThuVien.IconZoom = 90D;
-            this.btnThuVien.IsTab = false;
-            this.btnThuVien.Location = new System.Drawing.Point(0, 0);
-            this.btnThuVien.Name = "btnThuVien";
-            this.btnThuVien.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThuVien.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
-            this.btnThuVien.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnThuVien.selected = false;
-            this.btnThuVien.Size = new System.Drawing.Size(277, 48);
-            this.btnThuVien.TabIndex = 1;
-            this.btnThuVien.Text = "Thư viện";
-            this.btnThuVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThuVien.Textcolor = System.Drawing.Color.White;
-            this.btnThuVien.TextFont = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThuVien.Click += new System.EventHandler(this.btnThuVien_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(55)))), ((int)(((byte)(68)))));
@@ -758,28 +721,6 @@
             this.panel6.Size = new System.Drawing.Size(1138, 80);
             this.panel6.TabIndex = 1;
             // 
-            // transpanelMenu
-            // 
-            this.transpanelMenu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
-            this.transpanelMenu.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.transpanelMenu.DefaultAnimation = animation1;
-            this.transpanelMenu.TimeStep = 0.04F;
-            // 
             // bunifuImageButton2
             // 
             this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
@@ -794,6 +735,65 @@
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 10;
             this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
+            // 
+            // transpanelMenu
+            // 
+            this.transpanelMenu.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
+            this.transpanelMenu.Cursor = null;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.transpanelMenu.DefaultAnimation = animation2;
+            this.transpanelMenu.TimeStep = 0.04F;
+            // 
+            // btnThuVien
+            // 
+            this.btnThuVien.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnThuVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnThuVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThuVien.BorderRadius = 0;
+            this.btnThuVien.ButtonText = "Thư viện";
+            this.btnThuVien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.transpanelMenu.SetDecoration(this.btnThuVien, BunifuAnimatorNS.DecorationType.None);
+            this.btnThuVien.DisabledColor = System.Drawing.Color.Gray;
+            this.btnThuVien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThuVien.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnThuVien.Iconimage = null;
+            this.btnThuVien.Iconimage_right = null;
+            this.btnThuVien.Iconimage_right_Selected = null;
+            this.btnThuVien.Iconimage_Selected = null;
+            this.btnThuVien.IconMarginLeft = 10;
+            this.btnThuVien.IconMarginRight = 0;
+            this.btnThuVien.IconRightVisible = true;
+            this.btnThuVien.IconRightZoom = 0D;
+            this.btnThuVien.IconVisible = true;
+            this.btnThuVien.IconZoom = 90D;
+            this.btnThuVien.IsTab = false;
+            this.btnThuVien.Location = new System.Drawing.Point(0, 0);
+            this.btnThuVien.Name = "btnThuVien";
+            this.btnThuVien.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnThuVien.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
+            this.btnThuVien.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnThuVien.selected = false;
+            this.btnThuVien.Size = new System.Drawing.Size(277, 48);
+            this.btnThuVien.TabIndex = 1;
+            this.btnThuVien.Text = "Thư viện";
+            this.btnThuVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThuVien.Textcolor = System.Drawing.Color.White;
+            this.btnThuVien.TextFont = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThuVien.Click += new System.EventHandler(this.btnThuVien_Click);
             // 
             // Form1
             // 
@@ -840,7 +840,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton btnTongQuan;
-        private Bunifu.Framework.UI.BunifuFlatButton btnThuVien;
         private System.Windows.Forms.Panel panelThuVien;
         private Bunifu.Framework.UI.BunifuFlatButton btnTacGia;
         private Bunifu.Framework.UI.BunifuFlatButton btnKeSach;
@@ -865,6 +864,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnNXB;
         private System.Windows.Forms.Panel panelMain;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnThuVien;
     }
 }
 
