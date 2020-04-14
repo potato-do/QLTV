@@ -1,0 +1,17 @@
+C:\Users\longn\source\repos\QLTV\QLTV\bin\Debug\QLTV.exe.config
+C:\Users\longn\source\repos\QLTV\QLTV\bin\Debug\QLTV.exe
+C:\Users\longn\source\repos\QLTV\QLTV\bin\Debug\QLTV.pdb
+C:\Users\longn\source\repos\QLTV\QLTV\obj\Debug\QLTV.csprojAssemblyReference.cache
+C:\Users\longn\source\repos\QLTV\QLTV\obj\Debug\QLTV.Form1.resources
+C:\Users\longn\source\repos\QLTV\QLTV\obj\Debug\QLTV.Properties.Resources.resources
+C:\Users\longn\source\repos\QLTV\QLTV\obj\Debug\QLTV.csproj.GenerateResource.cache
+C:\Users\longn\source\repos\QLTV\QLTV\obj\Debug\QLTV.csproj.CoreCompileInputs.cache
+C:\Users\longn\source\repos\QLTV\QLTV\obj\Debug\QLTV.exe
+C:\Users\longn\source\repos\QLTV\QLTV\obj\Debug\QLTV.pdb
+C:\Users\longn\source\repos\QLTV\QLTV\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\longn\source\repos\QLTV\QLTV\obj\Debug\QLTV.csproj.CopyComplete
+C:\Users\longn\source\repos\QLTV\QLTV\bin\Debug\MetroFramework.dll
+C:\Users\longn\source\repos\QLTV\QLTV\obj\Debug\QLTV.thuvien.resources
+C:\Users\longn\source\repos\QLTV\QLTV\obj\Debug\QLTV.keSach.resources
+C:\Users\longn\source\repos\QLTV\QLTV\obj\Debug\QLTV.tacGia.resources
+C:\Users\longn\source\repos\QLTV\QLTV\obj\Debug\QLTV.NXB.resources
