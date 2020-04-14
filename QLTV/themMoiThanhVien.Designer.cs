@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnXoa = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnThanhVien = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.labelSDT = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.labelHoTen = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,15 +44,9 @@
             this.labelDiaChi = new System.Windows.Forms.Label();
             this.labelMaDG = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.txtSDT = new System.Windows.Forms.TextBox();
-            this.labelSDT = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnThanhVien = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnXoa = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.bunifuCards1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -72,6 +71,97 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1030, 187);
             this.panel2.TabIndex = 8;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnXoa.BorderRadius = 0;
+            this.btnXoa.ButtonText = "          Xóa";
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoa.DisabledColor = System.Drawing.Color.Gray;
+            this.btnXoa.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnXoa.Iconimage = null;
+            this.btnXoa.Iconimage_right = null;
+            this.btnXoa.Iconimage_right_Selected = null;
+            this.btnXoa.Iconimage_Selected = null;
+            this.btnXoa.IconMarginLeft = 10;
+            this.btnXoa.IconMarginRight = 0;
+            this.btnXoa.IconRightVisible = true;
+            this.btnXoa.IconRightZoom = 0D;
+            this.btnXoa.IconVisible = true;
+            this.btnXoa.IconZoom = 90D;
+            this.btnXoa.IsTab = false;
+            this.btnXoa.Location = new System.Drawing.Point(694, 145);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnXoa.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
+            this.btnXoa.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnXoa.selected = false;
+            this.btnXoa.Size = new System.Drawing.Size(135, 26);
+            this.btnXoa.TabIndex = 11;
+            this.btnXoa.Text = "          Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Textcolor = System.Drawing.Color.White;
+            this.btnXoa.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnThanhVien
+            // 
+            this.btnThanhVien.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnThanhVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnThanhVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThanhVien.BorderRadius = 0;
+            this.btnThanhVien.ButtonText = "    Thêm mới";
+            this.btnThanhVien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhVien.DisabledColor = System.Drawing.Color.Gray;
+            this.btnThanhVien.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnThanhVien.Iconimage = null;
+            this.btnThanhVien.Iconimage_right = null;
+            this.btnThanhVien.Iconimage_right_Selected = null;
+            this.btnThanhVien.Iconimage_Selected = null;
+            this.btnThanhVien.IconMarginLeft = 10;
+            this.btnThanhVien.IconMarginRight = 0;
+            this.btnThanhVien.IconRightVisible = true;
+            this.btnThanhVien.IconRightZoom = 0D;
+            this.btnThanhVien.IconVisible = true;
+            this.btnThanhVien.IconZoom = 90D;
+            this.btnThanhVien.IsTab = false;
+            this.btnThanhVien.Location = new System.Drawing.Point(241, 145);
+            this.btnThanhVien.Name = "btnThanhVien";
+            this.btnThanhVien.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnThanhVien.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
+            this.btnThanhVien.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnThanhVien.selected = false;
+            this.btnThanhVien.Size = new System.Drawing.Size(135, 26);
+            this.btnThanhVien.TabIndex = 10;
+            this.btnThanhVien.Text = "    Thêm mới";
+            this.btnThanhVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThanhVien.Textcolor = System.Drawing.Color.White;
+            this.btnThanhVien.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(665, 66);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 9;
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(665, 100);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(200, 20);
+            this.txtSDT.TabIndex = 8;
+            // 
+            // labelSDT
+            // 
+            this.labelSDT.AutoSize = true;
+            this.labelSDT.Location = new System.Drawing.Point(597, 103);
+            this.labelSDT.Name = "labelSDT";
+            this.labelSDT.Size = new System.Drawing.Size(29, 13);
+            this.labelSDT.TabIndex = 7;
+            this.labelSDT.Text = "SĐT";
             // 
             // txtHoTen
             // 
@@ -154,128 +244,29 @@
             this.dataGridView1.Location = new System.Drawing.Point(52, 216);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
-            this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.TabIndex = 11;
             // 
-            // bunifuCards1
+            // panel1
             // 
-            this.bunifuCards1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuCards1.BorderRadius = 5;
-            this.bunifuCards1.BottomSahddow = true;
-            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(55)))), ((int)(((byte)(68)))));
-            this.bunifuCards1.Controls.Add(this.dataGridView1);
-            this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCards1.Name = "bunifuCards1";
-            this.bunifuCards1.RightSahddow = true;
-            this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(1140, 680);
-            this.bunifuCards1.TabIndex = 9;
-            this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1140, 5);
+            this.panel1.TabIndex = 12;
             // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(665, 100);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(200, 20);
-            this.txtSDT.TabIndex = 8;
-            // 
-            // labelSDT
-            // 
-            this.labelSDT.AutoSize = true;
-            this.labelSDT.Location = new System.Drawing.Point(597, 103);
-            this.labelSDT.Name = "labelSDT";
-            this.labelSDT.Size = new System.Drawing.Size(29, 13);
-            this.labelSDT.TabIndex = 7;
-            this.labelSDT.Text = "SĐT";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(665, 66);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 9;
-            // 
-            // btnThanhVien
-            // 
-            this.btnThanhVien.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThanhVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThanhVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThanhVien.BorderRadius = 0;
-            this.btnThanhVien.ButtonText = "    Thêm mới";
-            this.btnThanhVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThanhVien.DisabledColor = System.Drawing.Color.Gray;
-            this.btnThanhVien.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnThanhVien.Iconimage = null;
-            this.btnThanhVien.Iconimage_right = null;
-            this.btnThanhVien.Iconimage_right_Selected = null;
-            this.btnThanhVien.Iconimage_Selected = null;
-            this.btnThanhVien.IconMarginLeft = 10;
-            this.btnThanhVien.IconMarginRight = 0;
-            this.btnThanhVien.IconRightVisible = true;
-            this.btnThanhVien.IconRightZoom = 0D;
-            this.btnThanhVien.IconVisible = true;
-            this.btnThanhVien.IconZoom = 90D;
-            this.btnThanhVien.IsTab = false;
-            this.btnThanhVien.Location = new System.Drawing.Point(241, 145);
-            this.btnThanhVien.Name = "btnThanhVien";
-            this.btnThanhVien.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThanhVien.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
-            this.btnThanhVien.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnThanhVien.selected = false;
-            this.btnThanhVien.Size = new System.Drawing.Size(135, 26);
-            this.btnThanhVien.TabIndex = 10;
-            this.btnThanhVien.Text = "    Thêm mới";
-            this.btnThanhVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThanhVien.Textcolor = System.Drawing.Color.White;
-            this.btnThanhVien.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnXoa.BorderRadius = 0;
-            this.btnXoa.ButtonText = "          Xóa";
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.DisabledColor = System.Drawing.Color.Gray;
-            this.btnXoa.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnXoa.Iconimage = null;
-            this.btnXoa.Iconimage_right = null;
-            this.btnXoa.Iconimage_right_Selected = null;
-            this.btnXoa.Iconimage_Selected = null;
-            this.btnXoa.IconMarginLeft = 10;
-            this.btnXoa.IconMarginRight = 0;
-            this.btnXoa.IconRightVisible = true;
-            this.btnXoa.IconRightZoom = 0D;
-            this.btnXoa.IconVisible = true;
-            this.btnXoa.IconZoom = 90D;
-            this.btnXoa.IsTab = false;
-            this.btnXoa.Location = new System.Drawing.Point(694, 145);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnXoa.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
-            this.btnXoa.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnXoa.selected = false;
-            this.btnXoa.Size = new System.Drawing.Size(135, 26);
-            this.btnXoa.TabIndex = 11;
-            this.btnXoa.Text = "          Xóa";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Textcolor = System.Drawing.Color.White;
-            this.btnXoa.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // thanhVien
+            // themMoiThanhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.bunifuCards1);
-            this.Name = "thanhVien";
+            this.Name = "themMoiThanhVien";
             this.Size = new System.Drawing.Size(1140, 680);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.bunifuCards1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -291,12 +282,12 @@
         private System.Windows.Forms.Label labelGT;
         private System.Windows.Forms.Label labelDiaChi;
         private System.Windows.Forms.Label labelMaDG;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label labelSDT;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private Bunifu.Framework.UI.BunifuFlatButton btnXoa;
         private Bunifu.Framework.UI.BunifuFlatButton btnThanhVien;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

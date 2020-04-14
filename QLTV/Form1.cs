@@ -139,6 +139,7 @@ namespace QLTV
             themMoiThanhVien tmtv = new themMoiThanhVien();
             this.panelMain.Controls.Add(tmtv);
             tmtv.Show();
+            btnCloseM_Click(sender, e);
             hidebutton();
         }
 
