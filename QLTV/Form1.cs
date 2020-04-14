@@ -101,6 +101,7 @@ namespace QLTV
             keSach keSach = new keSach();
             this.panelMain.Controls.Add(keSach);
             keSach.Show();
+            btnCloseM_Click(sender, e);
             hidebutton();
         }
 
@@ -110,6 +111,7 @@ namespace QLTV
             tacGia tacGia = new tacGia();
             this.panelMain.Controls.Add(tacGia);
             tacGia.Show();
+            btnCloseM_Click(sender, e);
             hidebutton();
         }
 
@@ -123,6 +125,7 @@ namespace QLTV
             NXB nxb = new NXB();
             this.panelMain.Controls.Add(nxb);
             nxb.Show();
+            btnCloseM_Click(sender, e);
             hidebutton();
         }
         private void btn_ThemMoiThanhVien_click(object sender, EventArgs e)
@@ -163,6 +166,7 @@ namespace QLTV
             this.panelMain.Controls.Clear();
             thuvien thuvien = new thuvien();
             this.panelMain.Controls.Add(thuvien);
+            btnCloseM_Click(sender, e);
             thuvien.Show();
         }
 
