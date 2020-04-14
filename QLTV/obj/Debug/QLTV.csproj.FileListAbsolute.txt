@@ -31,3 +31,4 @@ C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.csproj.CoreCompile
 C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.csproj.CopyComplete
 C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.exe
 C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.pdb
+C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themMoiThanhVien.resources

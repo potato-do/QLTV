@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QLTV
 {
-    public partial class thanhVien : UserControl
+    public partial class themMoiThanhVien : UserControl
     {
-        public thanhVien()
+        public themMoiThanhVien()
         {
             InitializeComponent();
+        }
+
+        private void bunifuCards1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

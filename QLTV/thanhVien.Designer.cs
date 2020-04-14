@@ -28,7 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(thanhVien));
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.btnTimKiem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnXoa = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnTraSach = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnMuonSach = new System.Windows.Forms.ToolStripButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.labelSDT = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.labelHoTen = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -38,24 +57,23 @@
             this.labelGT = new System.Windows.Forms.Label();
             this.labelDiaChi = new System.Windows.Forms.Label();
             this.labelMaDG = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.txtSDT = new System.Windows.Forms.TextBox();
-            this.labelSDT = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnThanhVien = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnXoa = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.bunifuCards1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.AutoSize = false;
+            this.toolStripComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+            this.toolStripComboBox1.Margin = new System.Windows.Forms.Padding(30, 0, 1, 0);
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(150, 23);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnXoa);
-            this.panel2.Controls.Add(this.btnThanhVien);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.txtSDT);
             this.panel2.Controls.Add(this.labelSDT);
@@ -70,82 +88,81 @@
             this.panel2.Controls.Add(this.labelMaDG);
             this.panel2.Location = new System.Drawing.Point(52, 23);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1030, 187);
+            this.panel2.Size = new System.Drawing.Size(1030, 119);
             this.panel2.TabIndex = 8;
             // 
-            // txtHoTen
+            // toolStripSeparator5
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(665, 27);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(200, 20);
-            this.txtHoTen.TabIndex = 6;
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 43);
             // 
-            // labelHoTen
+            // toolStripTextBox1
             // 
-            this.labelHoTen.AutoSize = true;
-            this.labelHoTen.Location = new System.Drawing.Point(572, 30);
-            this.labelHoTen.Name = "labelHoTen";
-            this.labelHoTen.Size = new System.Drawing.Size(54, 13);
-            this.labelHoTen.TabIndex = 5;
-            this.labelHoTen.Text = "Họ và tên";
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.Margin = new System.Windows.Forms.Padding(1, 0, 30, 0);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(300, 23);
             // 
-            // label4
+            // btnTimKiem
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(572, 69);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Ngày sinh";
+            this.btnTimKiem.AutoSize = false;
+            this.btnTimKiem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
+            this.btnTimKiem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(30, 1, 10, 2);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(80, 20);
+            this.btnTimKiem.Text = "Tìm kiếm";
             // 
-            // cbGioiTinh
+            // toolStripSeparator4
             // 
-            this.cbGioiTinh.FormattingEnabled = true;
-            this.cbGioiTinh.Location = new System.Drawing.Point(260, 66);
-            this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(116, 21);
-            this.cbGioiTinh.TabIndex = 2;
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 43);
             // 
-            // txtDiaChi
+            // toolStripSeparator3
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(260, 104);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(218, 20);
-            this.txtDiaChi.TabIndex = 1;
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 43);
             // 
-            // txtMaDG
+            // btnXoa
             // 
-            this.txtMaDG.Location = new System.Drawing.Point(260, 27);
-            this.txtMaDG.Name = "txtMaDG";
-            this.txtMaDG.Size = new System.Drawing.Size(116, 20);
-            this.txtMaDG.TabIndex = 1;
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(10, 1, 30, 2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(47, 40);
+            this.btnXoa.Text = "Xóa";
             // 
-            // labelGT
+            // toolStripSeparator2
             // 
-            this.labelGT.AutoSize = true;
-            this.labelGT.Location = new System.Drawing.Point(156, 69);
-            this.labelGT.Name = "labelGT";
-            this.labelGT.Size = new System.Drawing.Size(47, 13);
-            this.labelGT.TabIndex = 0;
-            this.labelGT.Text = "Giới tính";
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 43);
             // 
-            // labelDiaChi
+            // btnTraSach
             // 
-            this.labelDiaChi.AutoSize = true;
-            this.labelDiaChi.Location = new System.Drawing.Point(156, 107);
-            this.labelDiaChi.Name = "labelDiaChi";
-            this.labelDiaChi.Size = new System.Drawing.Size(40, 13);
-            this.labelDiaChi.TabIndex = 0;
-            this.labelDiaChi.Text = "Địa chỉ";
+            this.btnTraSach.Image = ((System.Drawing.Image)(resources.GetObject("btnTraSach.Image")));
+            this.btnTraSach.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTraSach.Margin = new System.Windows.Forms.Padding(10, 1, 10, 2);
+            this.btnTraSach.Name = "btnTraSach";
+            this.btnTraSach.Size = new System.Drawing.Size(69, 40);
+            this.btnTraSach.Text = "Trả sách";
             // 
-            // labelMaDG
+            // toolStripSeparator1
             // 
-            this.labelMaDG.AutoSize = true;
-            this.labelMaDG.Location = new System.Drawing.Point(156, 30);
-            this.labelMaDG.Name = "labelMaDG";
-            this.labelMaDG.Size = new System.Drawing.Size(61, 13);
-            this.labelMaDG.TabIndex = 0;
-            this.labelMaDG.Text = "Mã độc giả";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 43);
+            // 
+            // btnMuonSach
+            // 
+            this.btnMuonSach.Image = ((System.Drawing.Image)(resources.GetObject("btnMuonSach.Image")));
+            this.btnMuonSach.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnMuonSach.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
+            this.btnMuonSach.Name = "btnMuonSach";
+            this.btnMuonSach.Size = new System.Drawing.Size(86, 40);
+            this.btnMuonSach.Text = "Mượn sách";
+            this.btnMuonSach.ToolTipText = "Mượn sách";
             // 
             // dataGridView1
             // 
@@ -156,13 +173,41 @@
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 10;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnMuonSach,
+            this.toolStripSeparator1,
+            this.btnTraSach,
+            this.toolStripSeparator2,
+            this.btnXoa,
+            this.toolStripSeparator3,
+            this.toolStripSeparator4,
+            this.btnTimKiem,
+            this.toolStripTextBox1,
+            this.toolStripSeparator5,
+            this.toolStripSeparator6,
+            this.toolStripComboBox1});
+            this.toolStrip1.Location = new System.Drawing.Point(52, 158);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1030, 43);
+            this.toolStrip1.TabIndex = 7;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 43);
+            // 
             // bunifuCards1
             // 
             this.bunifuCards1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(55)))), ((int)(((byte)(68)))));
-            this.bunifuCards1.Controls.Add(this.dataGridView1);
             this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuCards1.LeftSahddow = false;
             this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
@@ -171,117 +216,144 @@
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(1140, 680);
             this.bunifuCards1.TabIndex = 9;
-            this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(669, 49);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 21;
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(665, 100);
+            this.txtSDT.Location = new System.Drawing.Point(669, 83);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(200, 20);
-            this.txtSDT.TabIndex = 8;
+            this.txtSDT.TabIndex = 20;
             // 
             // labelSDT
             // 
             this.labelSDT.AutoSize = true;
-            this.labelSDT.Location = new System.Drawing.Point(597, 103);
+            this.labelSDT.Location = new System.Drawing.Point(601, 86);
             this.labelSDT.Name = "labelSDT";
             this.labelSDT.Size = new System.Drawing.Size(29, 13);
-            this.labelSDT.TabIndex = 7;
+            this.labelSDT.TabIndex = 19;
             this.labelSDT.Text = "SĐT";
             // 
-            // dateTimePicker1
+            // txtHoTen
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(665, 66);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 9;
+            this.txtHoTen.Location = new System.Drawing.Point(669, 10);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(200, 20);
+            this.txtHoTen.TabIndex = 18;
             // 
-            // btnThanhVien
+            // labelHoTen
             // 
-            this.btnThanhVien.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThanhVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThanhVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThanhVien.BorderRadius = 0;
-            this.btnThanhVien.ButtonText = "    Thêm mới";
-            this.btnThanhVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThanhVien.DisabledColor = System.Drawing.Color.Gray;
-            this.btnThanhVien.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnThanhVien.Iconimage = null;
-            this.btnThanhVien.Iconimage_right = null;
-            this.btnThanhVien.Iconimage_right_Selected = null;
-            this.btnThanhVien.Iconimage_Selected = null;
-            this.btnThanhVien.IconMarginLeft = 10;
-            this.btnThanhVien.IconMarginRight = 0;
-            this.btnThanhVien.IconRightVisible = true;
-            this.btnThanhVien.IconRightZoom = 0D;
-            this.btnThanhVien.IconVisible = true;
-            this.btnThanhVien.IconZoom = 90D;
-            this.btnThanhVien.IsTab = false;
-            this.btnThanhVien.Location = new System.Drawing.Point(241, 145);
-            this.btnThanhVien.Name = "btnThanhVien";
-            this.btnThanhVien.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThanhVien.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
-            this.btnThanhVien.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnThanhVien.selected = false;
-            this.btnThanhVien.Size = new System.Drawing.Size(135, 26);
-            this.btnThanhVien.TabIndex = 10;
-            this.btnThanhVien.Text = "    Thêm mới";
-            this.btnThanhVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThanhVien.Textcolor = System.Drawing.Color.White;
-            this.btnThanhVien.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHoTen.AutoSize = true;
+            this.labelHoTen.Location = new System.Drawing.Point(576, 13);
+            this.labelHoTen.Name = "labelHoTen";
+            this.labelHoTen.Size = new System.Drawing.Size(54, 13);
+            this.labelHoTen.TabIndex = 17;
+            this.labelHoTen.Text = "Họ và tên";
             // 
-            // btnXoa
+            // label4
             // 
-            this.btnXoa.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnXoa.BorderRadius = 0;
-            this.btnXoa.ButtonText = "          Xóa";
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.DisabledColor = System.Drawing.Color.Gray;
-            this.btnXoa.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnXoa.Iconimage = null;
-            this.btnXoa.Iconimage_right = null;
-            this.btnXoa.Iconimage_right_Selected = null;
-            this.btnXoa.Iconimage_Selected = null;
-            this.btnXoa.IconMarginLeft = 10;
-            this.btnXoa.IconMarginRight = 0;
-            this.btnXoa.IconRightVisible = true;
-            this.btnXoa.IconRightZoom = 0D;
-            this.btnXoa.IconVisible = true;
-            this.btnXoa.IconZoom = 90D;
-            this.btnXoa.IsTab = false;
-            this.btnXoa.Location = new System.Drawing.Point(694, 145);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnXoa.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
-            this.btnXoa.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnXoa.selected = false;
-            this.btnXoa.Size = new System.Drawing.Size(135, 26);
-            this.btnXoa.TabIndex = 11;
-            this.btnXoa.Text = "          Xóa";
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Textcolor = System.Drawing.Color.White;
-            this.btnXoa.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(576, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Ngày sinh";
+            // 
+            // cbGioiTinh
+            // 
+            this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Location = new System.Drawing.Point(264, 49);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Size = new System.Drawing.Size(116, 21);
+            this.cbGioiTinh.TabIndex = 15;
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(264, 87);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(218, 20);
+            this.txtDiaChi.TabIndex = 13;
+            // 
+            // txtMaDG
+            // 
+            this.txtMaDG.Location = new System.Drawing.Point(264, 10);
+            this.txtMaDG.Name = "txtMaDG";
+            this.txtMaDG.Size = new System.Drawing.Size(116, 20);
+            this.txtMaDG.TabIndex = 14;
+            // 
+            // labelGT
+            // 
+            this.labelGT.AutoSize = true;
+            this.labelGT.Location = new System.Drawing.Point(160, 52);
+            this.labelGT.Name = "labelGT";
+            this.labelGT.Size = new System.Drawing.Size(47, 13);
+            this.labelGT.TabIndex = 10;
+            this.labelGT.Text = "Giới tính";
+            // 
+            // labelDiaChi
+            // 
+            this.labelDiaChi.AutoSize = true;
+            this.labelDiaChi.Location = new System.Drawing.Point(160, 90);
+            this.labelDiaChi.Name = "labelDiaChi";
+            this.labelDiaChi.Size = new System.Drawing.Size(40, 13);
+            this.labelDiaChi.TabIndex = 11;
+            this.labelDiaChi.Text = "Địa chỉ";
+            // 
+            // labelMaDG
+            // 
+            this.labelMaDG.AutoSize = true;
+            this.labelMaDG.Location = new System.Drawing.Point(160, 13);
+            this.labelMaDG.Name = "labelMaDG";
+            this.labelMaDG.Size = new System.Drawing.Size(61, 13);
+            this.labelMaDG.TabIndex = 12;
+            this.labelMaDG.Text = "Mã độc giả";
             // 
             // thanhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.bunifuCards1);
             this.Name = "thanhVien";
             this.Size = new System.Drawing.Size(1140, 680);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.bunifuCards1.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripButton btnTimKiem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton btnXoa;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton btnTraSach;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton btnMuonSach;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.Label labelSDT;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label labelHoTen;
         private System.Windows.Forms.Label label4;
@@ -291,12 +363,5 @@
         private System.Windows.Forms.Label labelGT;
         private System.Windows.Forms.Label labelDiaChi;
         private System.Windows.Forms.Label labelMaDG;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.Label labelSDT;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private Bunifu.Framework.UI.BunifuFlatButton btnXoa;
-        private Bunifu.Framework.UI.BunifuFlatButton btnThanhVien;
     }
 }

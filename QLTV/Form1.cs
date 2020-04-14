@@ -117,6 +117,11 @@ namespace QLTV
 
         private void btn_ThanhVien_click(object sender, EventArgs e)
         {
+            this.panelMain.Controls.Clear();
+            thanhVien tv = new thanhVien();
+            this.panelMain.Controls.Add(tv);
+            tv.Show();
+            btnCloseM_Click(sender, e);
             hidebutton();
         }
         private void btn_NXB_click(object sender, EventArgs e)
@@ -131,9 +136,9 @@ namespace QLTV
         private void btn_ThemMoiThanhVien_click(object sender, EventArgs e)
         {
             this.panelMain.Controls.Clear();
-            thanhVien tv = new thanhVien();
-            this.panelMain.Controls.Add(tv);
-            tv.Show();
+            themMoiThanhVien tmtv = new themMoiThanhVien();
+            this.panelMain.Controls.Add(tmtv);
+            tmtv.Show();
             hidebutton();
         }
 
