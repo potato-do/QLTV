@@ -66,6 +66,12 @@
     <Compile Include="keSach.Designer.cs">
       <DependentUpon>keSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="muonSachForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="muonSachForm.Designer.cs">
+      <DependentUpon>muonSachForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NXB.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -86,11 +92,11 @@
     <Compile Include="thanhVien.Designer.cs">
       <DependentUpon>thanhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="themMoiThanhVien.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="themThanhVien.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="themMoiThanhVien.Designer.cs">
-      <DependentUpon>themMoiThanhVien.cs</DependentUpon>
+    <Compile Include="themThanhVien.Designer.cs">
+      <DependentUpon>themThanhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="thuvien.cs">
       <SubType>UserControl</SubType>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="keSach.resx">
       <DependentUpon>keSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="muonSachForm.resx">
+      <DependentUpon>muonSachForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NXB.resx">
       <DependentUpon>NXB.cs</DependentUpon>
@@ -122,8 +131,8 @@
     <EmbeddedResource Include="thanhVien.resx">
       <DependentUpon>thanhVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="themMoiThanhVien.resx">
-      <DependentUpon>themMoiThanhVien.cs</DependentUpon>
+    <EmbeddedResource Include="themThanhVien.resx">
+      <DependentUpon>themThanhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="thuvien.resx">
       <DependentUpon>thuvien.cs</DependentUpon>

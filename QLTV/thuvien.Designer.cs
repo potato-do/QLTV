@@ -64,6 +64,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.btnReload = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -105,7 +106,8 @@
             this.toolStripTextBox1,
             this.toolStripSeparator5,
             this.toolStripSeparator6,
-            this.toolStripComboBox1});
+            this.toolStripComboBox1,
+            this.btnReload});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1030, 43);
@@ -387,6 +389,17 @@
             this.bunifuCards1.Size = new System.Drawing.Size(1140, 680);
             this.bunifuCards1.TabIndex = 2;
             // 
+            // btnReload
+            // 
+            this.btnReload.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReload.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(23, 40);
+            this.btnReload.Text = "toolStripButton1";
+            this.btnReload.ToolTipText = "tải lại trang";
+            // 
             // thuvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,5 +456,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbViTri;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ToolStripButton btnReload;
     }
 }

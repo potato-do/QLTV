@@ -21,14 +21,13 @@ namespace QLTV
     //ẩn hiện panel 
         private void custombutton()
         {
-            panelTV.Visible = false;
+            
             panelThuVien.Visible = false;
             panelQL.Visible = false;
         }
         private void hidebutton()
         {
-            if (panelTV.Visible == true)
-                panelTV.Visible = false;
+           
             if (panelThuVien.Visible == true)
                 panelThuVien.Visible = false;
             if (panelQL.Visible == true)
@@ -52,10 +51,7 @@ namespace QLTV
         {
             showbutton(panelThuVien);
         }
-        private void bunifuImageButton3_Click(object sender, EventArgs e)
-        {
-            showbutton(panelTV);
-        }
+      
 
         private void bunifuImageButton4_Click(object sender, EventArgs e)
         {
@@ -133,20 +129,9 @@ namespace QLTV
             btnCloseM_Click(sender, e);
             hidebutton();
         }
-        private void btn_ThemMoiThanhVien_click(object sender, EventArgs e)
-        {
-            this.panelMain.Controls.Clear();
-            themMoiThanhVien tmtv = new themMoiThanhVien();
-            this.panelMain.Controls.Add(tmtv);
-            tmtv.Show();
-            btnCloseM_Click(sender, e);
-            hidebutton();
-        }
+        
 
-        private void btn_ChinhSuaThanhVien_click(object sender, EventArgs e)
-        {
-            hidebutton();
-        }
+       
         private void btn_NhanVien_click(object sender, EventArgs e)
         {
             hidebutton();
@@ -154,10 +139,21 @@ namespace QLTV
 
         private void btn_MuonTra_click(object sender, EventArgs e)
         {
+            muonSachForm muonSach = new muonSachForm();
+            muonSach.Show();
+            btnCloseM_Click(sender, e);
             hidebutton();
         }
 
         private void btnNCC_click(object sender, EventArgs e)
+        {
+            hidebutton();
+        }
+        private void btnTra_Click(object sender, EventArgs e)
+        {
+            hidebutton();
+        }
+        private void btnTheoDoi_Click(object sender, EventArgs e)
         {
             hidebutton();
         }
@@ -187,5 +183,7 @@ namespace QLTV
         {
             this.Close();
         }
+
+        
     }
 }

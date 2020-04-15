@@ -36,22 +36,19 @@
             this.bunifuFlatButton8 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelQL = new System.Windows.Forms.Panel();
-            this.btnMuonTra = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnMuonMoi = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnNV = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnQL = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panelTV = new System.Windows.Forms.Panel();
-            this.btnThanhVienSua = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnThanhVienTM = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnThanhVien = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelThuVien = new System.Windows.Forms.Panel();
             this.btnNXB = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnTacGia = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnKeSach = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnThuVien = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,16 +60,15 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.transpanelMenu = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.btnThuVien = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnTheoDoi = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnTra = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panelSider.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelQL.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
-            this.panelTV.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panelThuVien.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -146,7 +142,6 @@
             // 
             this.panel2.Controls.Add(this.panelQL);
             this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.panelTV);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.bunifuImageButton1);
             this.panel2.Controls.Add(this.panelThuVien);
@@ -159,50 +154,52 @@
             // 
             // panelQL
             // 
-            this.panelQL.Controls.Add(this.btnMuonTra);
+            this.panelQL.Controls.Add(this.btnTheoDoi);
+            this.panelQL.Controls.Add(this.btnTra);
+            this.panelQL.Controls.Add(this.btnMuonMoi);
             this.panelQL.Controls.Add(this.btnNV);
             this.transpanelMenu.SetDecoration(this.panelQL, BunifuAnimatorNS.DecorationType.None);
             this.panelQL.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelQL.Location = new System.Drawing.Point(0, 390);
+            this.panelQL.Location = new System.Drawing.Point(0, 291);
             this.panelQL.Name = "panelQL";
-            this.panelQL.Size = new System.Drawing.Size(277, 99);
+            this.panelQL.Size = new System.Drawing.Size(277, 195);
             this.panelQL.TabIndex = 14;
             // 
-            // btnMuonTra
+            // btnMuonMoi
             // 
-            this.btnMuonTra.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnMuonTra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnMuonTra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMuonTra.BorderRadius = 0;
-            this.btnMuonTra.ButtonText = "Theo dõi mượn/trả";
-            this.btnMuonTra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.transpanelMenu.SetDecoration(this.btnMuonTra, BunifuAnimatorNS.DecorationType.None);
-            this.btnMuonTra.DisabledColor = System.Drawing.Color.Gray;
-            this.btnMuonTra.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnMuonTra.Iconimage = null;
-            this.btnMuonTra.Iconimage_right = null;
-            this.btnMuonTra.Iconimage_right_Selected = null;
-            this.btnMuonTra.Iconimage_Selected = null;
-            this.btnMuonTra.IconMarginLeft = 10;
-            this.btnMuonTra.IconMarginRight = 0;
-            this.btnMuonTra.IconRightVisible = true;
-            this.btnMuonTra.IconRightZoom = 0D;
-            this.btnMuonTra.IconVisible = true;
-            this.btnMuonTra.IconZoom = 90D;
-            this.btnMuonTra.IsTab = false;
-            this.btnMuonTra.Location = new System.Drawing.Point(39, 52);
-            this.btnMuonTra.Name = "btnMuonTra";
-            this.btnMuonTra.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnMuonTra.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
-            this.btnMuonTra.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnMuonTra.selected = false;
-            this.btnMuonTra.Size = new System.Drawing.Size(213, 48);
-            this.btnMuonTra.TabIndex = 3;
-            this.btnMuonTra.Text = "Theo dõi mượn/trả";
-            this.btnMuonTra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMuonTra.Textcolor = System.Drawing.Color.White;
-            this.btnMuonTra.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMuonTra.Click += new System.EventHandler(this.btn_MuonTra_click);
+            this.btnMuonMoi.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnMuonMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnMuonMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMuonMoi.BorderRadius = 0;
+            this.btnMuonMoi.ButtonText = "Mượn mới sách";
+            this.btnMuonMoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.transpanelMenu.SetDecoration(this.btnMuonMoi, BunifuAnimatorNS.DecorationType.None);
+            this.btnMuonMoi.DisabledColor = System.Drawing.Color.Gray;
+            this.btnMuonMoi.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnMuonMoi.Iconimage = null;
+            this.btnMuonMoi.Iconimage_right = null;
+            this.btnMuonMoi.Iconimage_right_Selected = null;
+            this.btnMuonMoi.Iconimage_Selected = null;
+            this.btnMuonMoi.IconMarginLeft = 10;
+            this.btnMuonMoi.IconMarginRight = 0;
+            this.btnMuonMoi.IconRightVisible = true;
+            this.btnMuonMoi.IconRightZoom = 0D;
+            this.btnMuonMoi.IconVisible = true;
+            this.btnMuonMoi.IconZoom = 90D;
+            this.btnMuonMoi.IsTab = false;
+            this.btnMuonMoi.Location = new System.Drawing.Point(39, 52);
+            this.btnMuonMoi.Name = "btnMuonMoi";
+            this.btnMuonMoi.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnMuonMoi.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
+            this.btnMuonMoi.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnMuonMoi.selected = false;
+            this.btnMuonMoi.Size = new System.Drawing.Size(213, 48);
+            this.btnMuonMoi.TabIndex = 3;
+            this.btnMuonMoi.Text = "Mượn mới sách";
+            this.btnMuonMoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMuonMoi.Textcolor = System.Drawing.Color.White;
+            this.btnMuonMoi.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMuonMoi.Click += new System.EventHandler(this.btn_MuonTra_click);
             // 
             // btnNV
             // 
@@ -246,7 +243,7 @@
             this.panel5.Controls.Add(this.btnQL);
             this.transpanelMenu.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 342);
+            this.panel5.Location = new System.Drawing.Point(0, 243);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(277, 48);
             this.panel5.TabIndex = 13;
@@ -303,92 +300,8 @@
             this.btnQL.TextFont = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQL.Click += new System.EventHandler(this.btnMoRongQL_click);
             // 
-            // panelTV
-            // 
-            this.panelTV.Controls.Add(this.btnThanhVienSua);
-            this.panelTV.Controls.Add(this.btnThanhVienTM);
-            this.transpanelMenu.SetDecoration(this.panelTV, BunifuAnimatorNS.DecorationType.None);
-            this.panelTV.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTV.Location = new System.Drawing.Point(0, 243);
-            this.panelTV.Name = "panelTV";
-            this.panelTV.Size = new System.Drawing.Size(277, 99);
-            this.panelTV.TabIndex = 12;
-            // 
-            // btnThanhVienSua
-            // 
-            this.btnThanhVienSua.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThanhVienSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThanhVienSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThanhVienSua.BorderRadius = 0;
-            this.btnThanhVienSua.ButtonText = "Chỉnh sửa chi tiết";
-            this.btnThanhVienSua.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.transpanelMenu.SetDecoration(this.btnThanhVienSua, BunifuAnimatorNS.DecorationType.None);
-            this.btnThanhVienSua.DisabledColor = System.Drawing.Color.Gray;
-            this.btnThanhVienSua.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnThanhVienSua.Iconimage = null;
-            this.btnThanhVienSua.Iconimage_right = null;
-            this.btnThanhVienSua.Iconimage_right_Selected = null;
-            this.btnThanhVienSua.Iconimage_Selected = null;
-            this.btnThanhVienSua.IconMarginLeft = 10;
-            this.btnThanhVienSua.IconMarginRight = 0;
-            this.btnThanhVienSua.IconRightVisible = true;
-            this.btnThanhVienSua.IconRightZoom = 0D;
-            this.btnThanhVienSua.IconVisible = true;
-            this.btnThanhVienSua.IconZoom = 90D;
-            this.btnThanhVienSua.IsTab = false;
-            this.btnThanhVienSua.Location = new System.Drawing.Point(39, 52);
-            this.btnThanhVienSua.Name = "btnThanhVienSua";
-            this.btnThanhVienSua.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThanhVienSua.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
-            this.btnThanhVienSua.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnThanhVienSua.selected = false;
-            this.btnThanhVienSua.Size = new System.Drawing.Size(213, 48);
-            this.btnThanhVienSua.TabIndex = 3;
-            this.btnThanhVienSua.Text = "Chỉnh sửa chi tiết";
-            this.btnThanhVienSua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThanhVienSua.Textcolor = System.Drawing.Color.White;
-            this.btnThanhVienSua.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhVienSua.Click += new System.EventHandler(this.btn_ChinhSuaThanhVien_click);
-            // 
-            // btnThanhVienTM
-            // 
-            this.btnThanhVienTM.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThanhVienTM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThanhVienTM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThanhVienTM.BorderRadius = 0;
-            this.btnThanhVienTM.ButtonText = "Thêm mới";
-            this.btnThanhVienTM.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.transpanelMenu.SetDecoration(this.btnThanhVienTM, BunifuAnimatorNS.DecorationType.None);
-            this.btnThanhVienTM.DisabledColor = System.Drawing.Color.Gray;
-            this.btnThanhVienTM.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnThanhVienTM.Iconimage = null;
-            this.btnThanhVienTM.Iconimage_right = null;
-            this.btnThanhVienTM.Iconimage_right_Selected = null;
-            this.btnThanhVienTM.Iconimage_Selected = null;
-            this.btnThanhVienTM.IconMarginLeft = 10;
-            this.btnThanhVienTM.IconMarginRight = 0;
-            this.btnThanhVienTM.IconRightVisible = true;
-            this.btnThanhVienTM.IconRightZoom = 0D;
-            this.btnThanhVienTM.IconVisible = true;
-            this.btnThanhVienTM.IconZoom = 90D;
-            this.btnThanhVienTM.IsTab = false;
-            this.btnThanhVienTM.Location = new System.Drawing.Point(39, 0);
-            this.btnThanhVienTM.Name = "btnThanhVienTM";
-            this.btnThanhVienTM.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThanhVienTM.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
-            this.btnThanhVienTM.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnThanhVienTM.selected = false;
-            this.btnThanhVienTM.Size = new System.Drawing.Size(213, 48);
-            this.btnThanhVienTM.TabIndex = 2;
-            this.btnThanhVienTM.Text = "Thêm mới";
-            this.btnThanhVienTM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThanhVienTM.Textcolor = System.Drawing.Color.White;
-            this.btnThanhVienTM.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhVienTM.Click += new System.EventHandler(this.btn_ThemMoiThanhVien_click);
-            // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.bunifuImageButton3);
             this.panel3.Controls.Add(this.btnThanhVien);
             this.transpanelMenu.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -396,21 +309,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(277, 48);
             this.panel3.TabIndex = 11;
-            // 
-            // bunifuImageButton3
-            // 
-            this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
-            this.transpanelMenu.SetDecoration(this.bunifuImageButton3, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
-            this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(251, 0);
-            this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(26, 48);
-            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton3.TabIndex = 10;
-            this.bunifuImageButton3.TabStop = false;
-            this.bunifuImageButton3.Zoom = 10;
-            this.bunifuImageButton3.Click += new System.EventHandler(this.bunifuImageButton3_Click);
             // 
             // btnThanhVien
             // 
@@ -583,6 +481,43 @@
             this.btnKeSach.Textcolor = System.Drawing.Color.White;
             this.btnKeSach.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKeSach.Click += new System.EventHandler(this.btn_ThemMoiThuVien_click);
+            // 
+            // btnThuVien
+            // 
+            this.btnThuVien.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnThuVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnThuVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThuVien.BorderRadius = 0;
+            this.btnThuVien.ButtonText = "Thư viện";
+            this.btnThuVien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.transpanelMenu.SetDecoration(this.btnThuVien, BunifuAnimatorNS.DecorationType.None);
+            this.btnThuVien.DisabledColor = System.Drawing.Color.Gray;
+            this.btnThuVien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThuVien.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnThuVien.Iconimage = null;
+            this.btnThuVien.Iconimage_right = null;
+            this.btnThuVien.Iconimage_right_Selected = null;
+            this.btnThuVien.Iconimage_Selected = null;
+            this.btnThuVien.IconMarginLeft = 10;
+            this.btnThuVien.IconMarginRight = 0;
+            this.btnThuVien.IconRightVisible = true;
+            this.btnThuVien.IconRightZoom = 0D;
+            this.btnThuVien.IconVisible = true;
+            this.btnThuVien.IconZoom = 90D;
+            this.btnThuVien.IsTab = false;
+            this.btnThuVien.Location = new System.Drawing.Point(0, 0);
+            this.btnThuVien.Name = "btnThuVien";
+            this.btnThuVien.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnThuVien.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
+            this.btnThuVien.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnThuVien.selected = false;
+            this.btnThuVien.Size = new System.Drawing.Size(277, 48);
+            this.btnThuVien.TabIndex = 1;
+            this.btnThuVien.Text = "Thư viện";
+            this.btnThuVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThuVien.Textcolor = System.Drawing.Color.White;
+            this.btnThuVien.TextFont = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThuVien.Click += new System.EventHandler(this.btnThuVien_Click);
             // 
             // panel1
             // 
@@ -758,42 +693,77 @@
             this.transpanelMenu.DefaultAnimation = animation2;
             this.transpanelMenu.TimeStep = 0.04F;
             // 
-            // btnThuVien
+            // btnTheoDoi
             // 
-            this.btnThuVien.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThuVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThuVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThuVien.BorderRadius = 0;
-            this.btnThuVien.ButtonText = "Thư viện";
-            this.btnThuVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.transpanelMenu.SetDecoration(this.btnThuVien, BunifuAnimatorNS.DecorationType.None);
-            this.btnThuVien.DisabledColor = System.Drawing.Color.Gray;
-            this.btnThuVien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnThuVien.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnThuVien.Iconimage = null;
-            this.btnThuVien.Iconimage_right = null;
-            this.btnThuVien.Iconimage_right_Selected = null;
-            this.btnThuVien.Iconimage_Selected = null;
-            this.btnThuVien.IconMarginLeft = 10;
-            this.btnThuVien.IconMarginRight = 0;
-            this.btnThuVien.IconRightVisible = true;
-            this.btnThuVien.IconRightZoom = 0D;
-            this.btnThuVien.IconVisible = true;
-            this.btnThuVien.IconZoom = 90D;
-            this.btnThuVien.IsTab = false;
-            this.btnThuVien.Location = new System.Drawing.Point(0, 0);
-            this.btnThuVien.Name = "btnThuVien";
-            this.btnThuVien.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btnThuVien.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
-            this.btnThuVien.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnThuVien.selected = false;
-            this.btnThuVien.Size = new System.Drawing.Size(277, 48);
-            this.btnThuVien.TabIndex = 1;
-            this.btnThuVien.Text = "Thư viện";
-            this.btnThuVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThuVien.Textcolor = System.Drawing.Color.White;
-            this.btnThuVien.TextFont = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThuVien.Click += new System.EventHandler(this.btnThuVien_Click);
+            this.btnTheoDoi.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnTheoDoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnTheoDoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTheoDoi.BorderRadius = 0;
+            this.btnTheoDoi.ButtonText = "Theo dõi mượn/trả";
+            this.btnTheoDoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.transpanelMenu.SetDecoration(this.btnTheoDoi, BunifuAnimatorNS.DecorationType.None);
+            this.btnTheoDoi.DisabledColor = System.Drawing.Color.Gray;
+            this.btnTheoDoi.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnTheoDoi.Iconimage = null;
+            this.btnTheoDoi.Iconimage_right = null;
+            this.btnTheoDoi.Iconimage_right_Selected = null;
+            this.btnTheoDoi.Iconimage_Selected = null;
+            this.btnTheoDoi.IconMarginLeft = 10;
+            this.btnTheoDoi.IconMarginRight = 0;
+            this.btnTheoDoi.IconRightVisible = true;
+            this.btnTheoDoi.IconRightZoom = 0D;
+            this.btnTheoDoi.IconVisible = true;
+            this.btnTheoDoi.IconZoom = 90D;
+            this.btnTheoDoi.IsTab = false;
+            this.btnTheoDoi.Location = new System.Drawing.Point(39, 154);
+            this.btnTheoDoi.Name = "btnTheoDoi";
+            this.btnTheoDoi.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnTheoDoi.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
+            this.btnTheoDoi.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnTheoDoi.selected = false;
+            this.btnTheoDoi.Size = new System.Drawing.Size(213, 48);
+            this.btnTheoDoi.TabIndex = 5;
+            this.btnTheoDoi.Text = "Theo dõi mượn/trả";
+            this.btnTheoDoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTheoDoi.Textcolor = System.Drawing.Color.White;
+            this.btnTheoDoi.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTheoDoi.Click += new System.EventHandler(this.btnTheoDoi_Click);
+            // 
+            // btnTra
+            // 
+            this.btnTra.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnTra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnTra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTra.BorderRadius = 0;
+            this.btnTra.ButtonText = "Trả sách đã mượn";
+            this.btnTra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.transpanelMenu.SetDecoration(this.btnTra, BunifuAnimatorNS.DecorationType.None);
+            this.btnTra.DisabledColor = System.Drawing.Color.Gray;
+            this.btnTra.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnTra.Iconimage = null;
+            this.btnTra.Iconimage_right = null;
+            this.btnTra.Iconimage_right_Selected = null;
+            this.btnTra.Iconimage_Selected = null;
+            this.btnTra.IconMarginLeft = 10;
+            this.btnTra.IconMarginRight = 0;
+            this.btnTra.IconRightVisible = true;
+            this.btnTra.IconRightZoom = 0D;
+            this.btnTra.IconVisible = true;
+            this.btnTra.IconZoom = 90D;
+            this.btnTra.IsTab = false;
+            this.btnTra.Location = new System.Drawing.Point(39, 102);
+            this.btnTra.Name = "btnTra";
+            this.btnTra.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnTra.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(81)))), ((int)(((byte)(100)))));
+            this.btnTra.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnTra.selected = false;
+            this.btnTra.Size = new System.Drawing.Size(213, 48);
+            this.btnTra.TabIndex = 4;
+            this.btnTra.Text = "Trả sách đã mượn";
+            this.btnTra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTra.Textcolor = System.Drawing.Color.White;
+            this.btnTra.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTra.Click += new System.EventHandler(this.btnTra_Click);
             // 
             // Form1
             // 
@@ -814,9 +784,7 @@
             this.panelQL.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
-            this.panelTV.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.panelThuVien.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -846,13 +814,9 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuFlatButton btnThanhVien;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
-        private System.Windows.Forms.Panel panelTV;
-        private Bunifu.Framework.UI.BunifuFlatButton btnThanhVienSua;
-        private Bunifu.Framework.UI.BunifuFlatButton btnThanhVienTM;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelQL;
-        private Bunifu.Framework.UI.BunifuFlatButton btnMuonTra;
+        private Bunifu.Framework.UI.BunifuFlatButton btnMuonMoi;
         private Bunifu.Framework.UI.BunifuFlatButton btnNV;
         private System.Windows.Forms.Panel panel5;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
@@ -865,6 +829,8 @@
         private System.Windows.Forms.Panel panelMain;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private Bunifu.Framework.UI.BunifuFlatButton btnThuVien;
+        private Bunifu.Framework.UI.BunifuFlatButton btnTheoDoi;
+        private Bunifu.Framework.UI.BunifuFlatButton btnTra;
     }
 }
 

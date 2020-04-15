@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NXB));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtDC = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTenNXB = new System.Windows.Forms.TextBox();
@@ -54,7 +55,7 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.txtDC = new System.Windows.Forms.TextBox();
+            this.btnReload = new System.Windows.Forms.ToolStripButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -78,6 +79,13 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1030, 119);
             this.panel2.TabIndex = 4;
+            // 
+            // txtDC
+            // 
+            this.txtDC.Location = new System.Drawing.Point(315, 47);
+            this.txtDC.Name = "txtDC";
+            this.txtDC.Size = new System.Drawing.Size(116, 20);
+            this.txtDC.TabIndex = 9;
             // 
             // txtSDT
             // 
@@ -193,7 +201,8 @@
             this.toolStripTextBox1,
             this.toolStripSeparator5,
             this.toolStripSeparator6,
-            this.toolStripComboBox1});
+            this.toolStripComboBox1,
+            this.btnReload});
             this.toolStrip1.Location = new System.Drawing.Point(52, 158);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1030, 43);
@@ -286,12 +295,16 @@
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Size = new System.Drawing.Size(150, 23);
             // 
-            // txtDC
+            // btnReload
             // 
-            this.txtDC.Location = new System.Drawing.Point(315, 47);
-            this.txtDC.Name = "txtDC";
-            this.txtDC.Size = new System.Drawing.Size(116, 20);
-            this.txtDC.TabIndex = 9;
+            this.btnReload.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReload.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(23, 40);
+            this.btnReload.Text = "toolStripButton1";
+            this.btnReload.ToolTipText = "tải lại trang";
             // 
             // NXB
             // 
@@ -340,5 +353,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripButton btnReload;
     }
 }
