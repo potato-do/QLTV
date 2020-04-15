@@ -17,6 +17,10 @@ namespace QLTV
             InitializeComponent();
         }
 
-       
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            themKeSach n = new themKeSach();
+            n.Show();
+        }
     }
 }

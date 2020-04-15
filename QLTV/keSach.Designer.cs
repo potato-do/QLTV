@@ -44,6 +44,7 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.btnReload = new System.Windows.Forms.ToolStripButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSLSach = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnReload = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -117,6 +117,7 @@
             this.btnThem.Size = new System.Drawing.Size(81, 40);
             this.btnThem.Text = "Thêm mới";
             this.btnThem.ToolTipText = "Thêm mới";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -193,6 +194,17 @@
             this.toolStripComboBox1.Margin = new System.Windows.Forms.Padding(30, 0, 1, 0);
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Size = new System.Drawing.Size(150, 23);
+            // 
+            // btnReload
+            // 
+            this.btnReload.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReload.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(23, 40);
+            this.btnReload.Text = "toolStripButton1";
+            this.btnReload.ToolTipText = "tải lại trang";
             // 
             // panel3
             // 
@@ -283,17 +295,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1140, 5);
             this.panel2.TabIndex = 0;
-            // 
-            // btnReload
-            // 
-            this.btnReload.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
-            this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReload.Margin = new System.Windows.Forms.Padding(10, 1, 0, 2);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(23, 40);
-            this.btnReload.Text = "toolStripButton1";
-            this.btnReload.ToolTipText = "tải lại trang";
             // 
             // keSach
             // 

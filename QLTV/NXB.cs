@@ -16,5 +16,11 @@ namespace QLTV
         {
             InitializeComponent();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            themNXB n = new themNXB();
+            n.Show();
+        }
     }
 }

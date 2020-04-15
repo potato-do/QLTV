@@ -98,6 +98,18 @@
     <Compile Include="thanhVien.Designer.cs">
       <DependentUpon>thanhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="themKeSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="themKeSach.Designer.cs">
+      <DependentUpon>themKeSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="themNXB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="themNXB.Designer.cs">
+      <DependentUpon>themNXB.cs</DependentUpon>
+    </Compile>
     <Compile Include="themThanhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +151,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="thanhVien.resx">
       <DependentUpon>thanhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="themKeSach.resx">
+      <DependentUpon>themKeSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="themNXB.resx">
+      <DependentUpon>themNXB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="themThanhVien.resx">
       <DependentUpon>themThanhVien.cs</DependentUpon>

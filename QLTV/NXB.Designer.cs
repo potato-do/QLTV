@@ -218,6 +218,7 @@
             this.btnThem.Size = new System.Drawing.Size(81, 40);
             this.btnThem.Text = "Thêm mới";
             this.btnThem.ToolTipText = "Thêm mới";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // toolStripSeparator1
             // 

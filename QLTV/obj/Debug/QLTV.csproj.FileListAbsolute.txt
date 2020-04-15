@@ -31,7 +31,6 @@ C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.csproj.CoreCompile
 C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.csproj.CopyComplete
 C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.exe
 C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.pdb
-C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themMoiThanhVien.resources
 C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\bin\Debug\QLTV.exe.config
 C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\bin\Debug\QLTV.exe
 C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\bin\Debug\QLTV.pdb
@@ -53,3 +52,8 @@ C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.pdb
 C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themThanhVien.resources
 C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.muonSachForm.resources
 C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.formThemSach.resources
+C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.formThemSach.resources
+C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.muonSachForm.resources
+C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themThanhVien.resources
+C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themKeSach.resources
+C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themNXB.resources
