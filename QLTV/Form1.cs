@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QLTV
 {
     public partial class Form1 : Form
     {
+        public static SqlConnection conn = new SqlConnection(@"Data Source=ADMIN;Initial Catalog=QLThuVien;Integrated Security=True");
+
         public Form1()
         {
             InitializeComponent();
@@ -184,6 +187,125 @@ namespace QLTV
             this.Close();
         }
 
-        
+
+
+
+        // Đổ dữ liệu ra datagridview
+        public static void renderData(string query, DataGridView dgv)
+        {
+            Form1.conn.Open();
+            SqlCommand com = new SqlCommand(query, conn);
+            com.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Form1.conn.Close();
+            dgv.DataSource = dt;
+        }
+
+        // Thực thi câu lệnh sql
+        public static bool executeQuery(string query)
+        {
+            Form1.conn.Open();
+            SqlCommand com = new SqlCommand(query, conn);
+            com.CommandType = CommandType.Text;
+            try
+            {
+                com.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+            finally
+            {
+                Form1.conn.Close();
+            }
+        }
+        // 
+        public static void getComboboxString(string query, ComboBox cb)
+        {
+            int count = 0;
+            conn.Open();
+            SqlCommand com = new SqlCommand(query, conn);
+            com.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            if (dt.Rows.Count != 0)
+            {
+                String[] ArrayData = new string[1000];
+                foreach (DataRow row in dt.Rows)
+                {
+                    String a;
+                    a = row[0].ToString();
+                    ArrayData[count] = a;
+                    count++;
+                }
+                for (int i = 0; i < count; i++)
+                {
+                    cb.Items.Add(ArrayData[i]);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Error!!!");
+            }
+        }
+
+        // 
+        public static void getComboboxInt(string query, ComboBox cb)
+        {
+            int count = 0;
+            conn.Open();
+            SqlCommand com = new SqlCommand(query, conn);
+            com.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            if (dt.Rows.Count != 0)
+            {
+                foreach (DataRow row in dt.Rows)
+                {
+                    string a;
+                    a = row[0].ToString();
+                    count = Int32.Parse(a);
+
+                }
+                for (int i = 0; i <= count; i++)
+                {
+                    cb.Items.Add(i);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Error!");
+            }
+        }
+
+
+        //Hàm lấy 1 string từ database
+        public static string getStringFromDB(string query)
+        {
+            string stringOut = "";
+            Form1.conn.Open();
+            SqlCommand com = new SqlCommand(query, conn);
+            com.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            if (dt.Rows.Count != 0)
+            {
+                foreach (DataRow row in dt.Rows)
+                {
+                    stringOut = row[0].ToString();
+                }
+            }
+            return stringOut;
+        }
     }
 }

@@ -54,6 +54,14 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnThemMoiThanhVien = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MaDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SachMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SachTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.btnReload = new System.Windows.Forms.ToolStripButton();
@@ -232,6 +240,7 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(47, 40);
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // toolStripSeparator2
             // 
@@ -265,12 +274,78 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaDG,
+            this.HoTen,
+            this.GT,
+            this.NgaySinh,
+            this.DiaChi,
+            this.SDT,
+            this.SachMuon,
+            this.SachTra});
             this.dataGridView1.Location = new System.Drawing.Point(52, 216);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 10;
+            // 
+            // MaDG
+            // 
+            this.MaDG.DataPropertyName = "MaDG";
+            this.MaDG.HeaderText = "Mã độc giả";
+            this.MaDG.Name = "MaDG";
+            this.MaDG.ReadOnly = true;
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "HoTen";
+            this.HoTen.HeaderText = "Họ và tên";
+            this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
+            // 
+            // GT
+            // 
+            this.GT.DataPropertyName = "GT";
+            this.GT.HeaderText = "Giới Tính";
+            this.GT.Name = "GT";
+            this.GT.ReadOnly = true;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.HeaderText = "Ngày sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.ReadOnly = true;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "ĐịaChỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "Số điện thoại";
+            this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
+            // 
+            // SachMuon
+            // 
+            this.SachMuon.HeaderText = "Số sách mượn";
+            this.SachMuon.Name = "SachMuon";
+            this.SachMuon.ReadOnly = true;
+            // 
+            // SachTra
+            // 
+            this.SachTra.HeaderText = "Số sách trả";
+            this.SachTra.Name = "SachTra";
+            this.SachTra.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -313,6 +388,7 @@
             this.btnReload.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnReload.Size = new System.Drawing.Size(25, 40);
             this.btnReload.Text = "tải lại trang";
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // bunifuCards1
             // 
@@ -328,6 +404,7 @@
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(1140, 680);
             this.bunifuCards1.TabIndex = 9;
+            this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
             // 
             // thanhVien
             // 
@@ -379,5 +456,13 @@
         private System.Windows.Forms.Label labelDiaChi;
         private System.Windows.Forms.Label labelMaDG;
         private System.Windows.Forms.ToolStripButton btnReload;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SachMuon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SachTra;
     }
 }

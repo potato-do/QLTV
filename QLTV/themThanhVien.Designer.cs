@@ -46,6 +46,13 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLuu = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +99,7 @@
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnXoa.Textcolor = System.Drawing.Color.White;
             this.btnXoa.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThanhVien
             // 
@@ -126,6 +134,7 @@
             this.btnThanhVien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnThanhVien.Textcolor = System.Drawing.Color.White;
             this.btnThanhVien.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhVien.Click += new System.EventHandler(this.btnThanhVien_Click);
             // 
             // dateTimePicker1
             // 
@@ -178,10 +187,15 @@
             // cbGioiTinh
             // 
             this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Khác"});
             this.cbGioiTinh.Location = new System.Drawing.Point(260, 66);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(116, 21);
             this.cbGioiTinh.TabIndex = 2;
+            this.cbGioiTinh.Text = "Nam";
             // 
             // txtDiaChi
             // 
@@ -192,6 +206,7 @@
             // 
             // txtMaDG
             // 
+            this.txtMaDG.Enabled = false;
             this.txtMaDG.Location = new System.Drawing.Point(260, 27);
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.Size = new System.Drawing.Size(116, 20);
@@ -226,10 +241,21 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.MaDG,
+            this.TenDG,
+            this.GT,
+            this.NgaySinh,
+            this.DiaChi,
+            this.SDT});
             this.dataGridView1.Location = new System.Drawing.Point(52, 198);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 431);
             this.dataGridView1.TabIndex = 14;
             // 
@@ -290,6 +316,49 @@
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLuu.Textcolor = System.Drawing.Color.White;
             this.btnLuu.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            // 
+            // MaDG
+            // 
+            this.MaDG.HeaderText = "Mã độc giả";
+            this.MaDG.Name = "MaDG";
+            this.MaDG.ReadOnly = true;
+            // 
+            // TenDG
+            // 
+            this.TenDG.HeaderText = "Họ và tên";
+            this.TenDG.Name = "TenDG";
+            this.TenDG.ReadOnly = true;
+            // 
+            // GT
+            // 
+            this.GT.HeaderText = "Giới tính";
+            this.GT.Name = "GT";
+            this.GT.ReadOnly = true;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.HeaderText = "Ngày sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.ReadOnly = true;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // SDT
+            // 
+            this.SDT.HeaderText = "Số điện thoại";
+            this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
             // 
             // themThanhVien
             // 
@@ -301,6 +370,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "themThanhVien";
             this.Text = "themThanhVien";
+            this.Load += new System.EventHandler(this.themThanhVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -328,5 +398,12 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuFlatButton btnLuu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
     }
 }
