@@ -21,5 +21,11 @@ namespace QLTV
         {
 
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            formthemTG formthemTG = new formthemTG();
+            formthemTG.Show();
+        }
     }
 }

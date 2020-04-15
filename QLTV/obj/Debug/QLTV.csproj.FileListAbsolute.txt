@@ -57,3 +57,6 @@ C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.muonSachForm.resou
 C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themThanhVien.resources
 C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themKeSach.resources
 C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themNXB.resources
+C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themKeSach.resources
+C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themNXB.resources
+C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.formthemTG.resources

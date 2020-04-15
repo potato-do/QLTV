@@ -66,6 +66,12 @@
     <Compile Include="formThemSach.Designer.cs">
       <DependentUpon>formThemSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="formthemTG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formthemTG.Designer.cs">
+      <DependentUpon>formthemTG.cs</DependentUpon>
+    </Compile>
     <Compile Include="keSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formThemSach.resx">
       <DependentUpon>formThemSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formthemTG.resx">
+      <DependentUpon>formthemTG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="keSach.resx">
       <DependentUpon>keSach.cs</DependentUpon>
