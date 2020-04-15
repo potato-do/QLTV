@@ -56,8 +56,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.btnReload = new System.Windows.Forms.ToolStripButton();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -109,7 +109,7 @@
             // labelSDT
             // 
             this.labelSDT.AutoSize = true;
-            this.labelSDT.Location = new System.Drawing.Point(601, 86);
+            this.labelSDT.Location = new System.Drawing.Point(576, 86);
             this.labelSDT.Name = "labelSDT";
             this.labelSDT.Size = new System.Drawing.Size(29, 13);
             this.labelSDT.TabIndex = 19;
@@ -302,6 +302,18 @@
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 43);
             // 
+            // btnReload
+            // 
+            this.btnReload.BackColor = System.Drawing.Color.Transparent;
+            this.btnReload.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
+            this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReload.Margin = new System.Windows.Forms.Padding(20, 1, 0, 2);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnReload.Size = new System.Drawing.Size(25, 40);
+            this.btnReload.Text = "tải lại trang";
+            // 
             // bunifuCards1
             // 
             this.bunifuCards1.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -316,18 +328,6 @@
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(1140, 680);
             this.bunifuCards1.TabIndex = 9;
-            // 
-            // btnReload
-            // 
-            this.btnReload.BackColor = System.Drawing.Color.Transparent;
-            this.btnReload.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnReload.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.Image")));
-            this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReload.Margin = new System.Windows.Forms.Padding(20, 1, 0, 2);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnReload.Size = new System.Drawing.Size(25, 40);
-            this.btnReload.Text = "tải lại trang";
             // 
             // thanhVien
             // 
