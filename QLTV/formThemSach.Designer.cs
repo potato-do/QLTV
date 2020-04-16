@@ -46,13 +46,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLuu = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnXoa = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnThanhVien = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.btnLuu = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnXoa = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnThanhVien = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -103,9 +113,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(786, 13);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 13);
+            this.label9.Size = new System.Drawing.Size(44, 13);
             this.label9.TabIndex = 9;
-            this.label9.Text = "Vị trí";
+            this.label9.Text = "Vị trí kệ";
             // 
             // txtTenTG
             // 
@@ -173,6 +183,7 @@
             // 
             // txtMaS
             // 
+            this.txtMaS.Enabled = false;
             this.txtMaS.Location = new System.Drawing.Point(137, 8);
             this.txtMaS.Name = "txtMaS";
             this.txtMaS.Size = new System.Drawing.Size(116, 20);
@@ -225,48 +236,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1030, 167);
             this.panel2.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên tựa sách";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(52, 207);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1030, 429);
-            this.panel1.TabIndex = 3;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 1);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1030, 428);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // bunifuCards1
-            // 
-            this.bunifuCards1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuCards1.BorderRadius = 5;
-            this.bunifuCards1.BottomSahddow = true;
-            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(55)))), ((int)(((byte)(68)))));
-            this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCards1.Name = "bunifuCards1";
-            this.bunifuCards1.RightSahddow = true;
-            this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(1124, 641);
-            this.bunifuCards1.TabIndex = 5;
             // 
             // btnLuu
             // 
@@ -335,6 +304,7 @@
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnXoa.Textcolor = System.Drawing.Color.White;
             this.btnXoa.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThanhVien
             // 
@@ -369,6 +339,124 @@
             this.btnThanhVien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnThanhVien.Textcolor = System.Drawing.Color.White;
             this.btnThanhVien.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhVien.Click += new System.EventHandler(this.btnThanhVien_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(33, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên tựa sách";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Location = new System.Drawing.Point(52, 207);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1030, 429);
+            this.panel1.TabIndex = 3;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.MaSach,
+            this.TenSach,
+            this.TenTG,
+            this.TenTL,
+            this.TenNXB,
+            this.NamXuatBan,
+            this.MaKe,
+            this.SoTrang,
+            this.SLSach});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 1);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1030, 428);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // bunifuCards1
+            // 
+            this.bunifuCards1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuCards1.BorderRadius = 5;
+            this.bunifuCards1.BottomSahddow = true;
+            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(55)))), ((int)(((byte)(68)))));
+            this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuCards1.LeftSahddow = false;
+            this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuCards1.Name = "bunifuCards1";
+            this.bunifuCards1.RightSahddow = true;
+            this.bunifuCards1.ShadowDepth = 20;
+            this.bunifuCards1.Size = new System.Drawing.Size(1124, 641);
+            this.bunifuCards1.TabIndex = 5;
+            this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            // 
+            // MaSach
+            // 
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            // 
+            // TenSach
+            // 
+            this.TenSach.HeaderText = "Tên sách";
+            this.TenSach.Name = "TenSach";
+            this.TenSach.ReadOnly = true;
+            // 
+            // TenTG
+            // 
+            this.TenTG.HeaderText = "Tên tác giả";
+            this.TenTG.Name = "TenTG";
+            this.TenTG.ReadOnly = true;
+            // 
+            // TenTL
+            // 
+            this.TenTL.HeaderText = "Thể loại";
+            this.TenTL.Name = "TenTL";
+            this.TenTL.ReadOnly = true;
+            // 
+            // TenNXB
+            // 
+            this.TenNXB.HeaderText = "Nhà xuất bản";
+            this.TenNXB.Name = "TenNXB";
+            this.TenNXB.ReadOnly = true;
+            // 
+            // NamXuatBan
+            // 
+            this.NamXuatBan.HeaderText = "Năm xuất bản";
+            this.NamXuatBan.Name = "NamXuatBan";
+            this.NamXuatBan.ReadOnly = true;
+            // 
+            // MaKe
+            // 
+            this.MaKe.HeaderText = "Kệ số";
+            this.MaKe.Name = "MaKe";
+            this.MaKe.ReadOnly = true;
+            // 
+            // SoTrang
+            // 
+            this.SoTrang.HeaderText = "Số trang";
+            this.SoTrang.Name = "SoTrang";
+            this.SoTrang.ReadOnly = true;
+            // 
+            // SLSach
+            // 
+            this.SLSach.HeaderText = "Số lượng";
+            this.SLSach.Name = "SLSach";
+            this.SLSach.ReadOnly = true;
             // 
             // formThemSach
             // 
@@ -415,5 +503,15 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnLuu;
         private Bunifu.Framework.UI.BunifuFlatButton btnXoa;
         private Bunifu.Framework.UI.BunifuFlatButton btnThanhVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenNXB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamXuatBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoTrang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SLSach;
     }
 }

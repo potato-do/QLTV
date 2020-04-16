@@ -65,6 +65,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -82,11 +89,22 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaSach,
+            this.TenSach,
+            this.TenTG,
+            this.TheLoai,
+            this.MaNXB,
+            this.MaKe,
+            this.SLSach});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 59);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 2;
             // 
@@ -401,6 +419,48 @@
             this.bunifuCards1.Size = new System.Drawing.Size(1140, 680);
             this.bunifuCards1.TabIndex = 2;
             // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "MaSach";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.Name = "MaSach";
+            // 
+            // TenSach
+            // 
+            this.TenSach.DataPropertyName = "TenSach";
+            this.TenSach.HeaderText = "Tên sách";
+            this.TenSach.Name = "TenSach";
+            // 
+            // TenTG
+            // 
+            this.TenTG.DataPropertyName = "TenTG";
+            this.TenTG.HeaderText = "Tác giả";
+            this.TenTG.Name = "TenTG";
+            // 
+            // TheLoai
+            // 
+            this.TheLoai.DataPropertyName = "TheLoai";
+            this.TheLoai.HeaderText = "Thể loại";
+            this.TheLoai.Name = "TheLoai";
+            // 
+            // MaNXB
+            // 
+            this.MaNXB.DataPropertyName = "MaNXB";
+            this.MaNXB.HeaderText = "Nhà xuất bản";
+            this.MaNXB.Name = "MaNXB";
+            // 
+            // MaKe
+            // 
+            this.MaKe.DataPropertyName = "MaKe";
+            this.MaKe.HeaderText = "Kệ";
+            this.MaKe.Name = "MaKe";
+            // 
+            // SLSach
+            // 
+            this.SLSach.DataPropertyName = "SLSach";
+            this.SLSach.HeaderText = "Số lượng";
+            this.SLSach.Name = "SLSach";
+            // 
             // thuvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,5 +518,12 @@
         private System.Windows.Forms.ComboBox cbViTri;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ToolStripButton btnReload;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TheLoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNXB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SLSach;
     }
 }

@@ -60,7 +60,5 @@ namespace QLTV
                 MessageBox.Show("Xóa dữ liệu thành công!!!");
             }
         }
-
-
     }
 }
