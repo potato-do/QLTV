@@ -29,6 +29,11 @@ namespace QLTV
             string query;
             query = "Select * from DocGia";
             Form1.renderData(query, dataGridView1);
+
+            cbBoLoc.Items.Add("Mã độc giả");
+            cbBoLoc.Items.Add("Tên độc giả");
+            cbBoLoc.Items.Add("Số điện thoại");
+
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -42,6 +47,11 @@ namespace QLTV
         private void btnXoa_Click(object sender, EventArgs e)
         {
             deleteData();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            searchCustomer();
         }
 
         //Hàm xóa độc giả khỏi database
@@ -60,5 +70,29 @@ namespace QLTV
                 MessageBox.Show("Xóa dữ liệu thành công!!!");
             }
         }
+
+        //hàm tìm kiếm độc giả theo bộ lọc
+        private void searchCustomer()
+        {
+            string query;
+            string text = txtSearch.Text;
+            if(cbBoLoc.SelectedIndex == 0)
+            {
+                query = "Select * from DocGia where MaDG like '%" + text + "%'";
+                Form1.renderData(query, dataGridView1);
+            }
+            if (cbBoLoc.SelectedIndex == 1)
+            {
+                query = "Select * from DocGia where HoTen like '%" + text + "%'";
+                Form1.renderData(query, dataGridView1);
+            }
+            if (cbBoLoc.SelectedIndex == 2)
+            {
+                query = "Select * from DocGia where SDT like '%" + text + "%'";
+                Form1.renderData(query, dataGridView1);
+            }
+        }
+
+        
     }
 }
