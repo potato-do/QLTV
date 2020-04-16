@@ -31,6 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(thuvien));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -65,13 +72,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SLSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -97,8 +97,8 @@
             this.MaSach,
             this.TenSach,
             this.TenTG,
-            this.TheLoai,
-            this.MaNXB,
+            this.TenTL,
+            this.TenNXB,
             this.MaKe,
             this.SLSach});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -107,6 +107,55 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "MaSach";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            // 
+            // TenSach
+            // 
+            this.TenSach.DataPropertyName = "TenSach";
+            this.TenSach.HeaderText = "Tên sách";
+            this.TenSach.Name = "TenSach";
+            this.TenSach.ReadOnly = true;
+            // 
+            // TenTG
+            // 
+            this.TenTG.DataPropertyName = "TenTG";
+            this.TenTG.HeaderText = "Tác giả";
+            this.TenTG.Name = "TenTG";
+            this.TenTG.ReadOnly = true;
+            // 
+            // TenTL
+            // 
+            this.TenTL.DataPropertyName = "TenTL";
+            this.TenTL.HeaderText = "Thể loại";
+            this.TenTL.Name = "TenTL";
+            this.TenTL.ReadOnly = true;
+            // 
+            // TenNXB
+            // 
+            this.TenNXB.DataPropertyName = "TenNXB";
+            this.TenNXB.HeaderText = "Nhà xuất bản";
+            this.TenNXB.Name = "TenNXB";
+            this.TenNXB.ReadOnly = true;
+            // 
+            // MaKe
+            // 
+            this.MaKe.DataPropertyName = "MaKe";
+            this.MaKe.HeaderText = "Kệ";
+            this.MaKe.Name = "MaKe";
+            this.MaKe.ReadOnly = true;
+            // 
+            // SLSach
+            // 
+            this.SLSach.DataPropertyName = "SLSach";
+            this.SLSach.HeaderText = "Số lượng";
+            this.SLSach.Name = "SLSach";
+            this.SLSach.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -170,6 +219,7 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(64, 40);
             this.btnXoa.Text = "Xóa bỏ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // toolStripSeparator3
             // 
@@ -229,6 +279,7 @@
             this.btnReload.Size = new System.Drawing.Size(23, 40);
             this.btnReload.Text = "toolStripButton1";
             this.btnReload.ToolTipText = "tải lại trang";
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // panel2
             // 
@@ -418,48 +469,7 @@
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(1140, 680);
             this.bunifuCards1.TabIndex = 2;
-            // 
-            // MaSach
-            // 
-            this.MaSach.DataPropertyName = "MaSach";
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.Name = "MaSach";
-            // 
-            // TenSach
-            // 
-            this.TenSach.DataPropertyName = "TenSach";
-            this.TenSach.HeaderText = "Tên sách";
-            this.TenSach.Name = "TenSach";
-            // 
-            // TenTG
-            // 
-            this.TenTG.DataPropertyName = "TenTG";
-            this.TenTG.HeaderText = "Tác giả";
-            this.TenTG.Name = "TenTG";
-            // 
-            // TheLoai
-            // 
-            this.TheLoai.DataPropertyName = "TheLoai";
-            this.TheLoai.HeaderText = "Thể loại";
-            this.TheLoai.Name = "TheLoai";
-            // 
-            // MaNXB
-            // 
-            this.MaNXB.DataPropertyName = "MaNXB";
-            this.MaNXB.HeaderText = "Nhà xuất bản";
-            this.MaNXB.Name = "MaNXB";
-            // 
-            // MaKe
-            // 
-            this.MaKe.DataPropertyName = "MaKe";
-            this.MaKe.HeaderText = "Kệ";
-            this.MaKe.Name = "MaKe";
-            // 
-            // SLSach
-            // 
-            this.SLSach.DataPropertyName = "SLSach";
-            this.SLSach.HeaderText = "Số lượng";
-            this.SLSach.Name = "SLSach";
+            this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
             // 
             // thuvien
             // 
@@ -521,8 +531,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TheLoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNXB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenNXB;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKe;
         private System.Windows.Forms.DataGridViewTextBoxColumn SLSach;
     }

@@ -61,6 +61,11 @@ namespace QLTV
             removeData();
         }
 
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            addBook();
+        }
+
         private void moveData()
         {
             string maSach = txtMaS.Text;
@@ -100,6 +105,51 @@ namespace QLTV
             {
                 dataGridView1.Rows.Remove(dataGridView1.Rows[dataGridView1.CurrentRow.Index]);
             }
+        }
+
+        //Hàm thêm nhiều sách từ gridview vào database
+        private void addBook()
+        {
+            string query;
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                string maSach = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                string tenSach = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                string tenTG = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                string theLoai = dataGridView1.Rows[i].Cells[4].Value.ToString();
+                string tenNXB = dataGridView1.Rows[i].Cells[5].Value.ToString();
+                string namXB = dataGridView1.Rows[i].Cells[6].Value.ToString(); 
+                string maKe = dataGridView1.Rows[i].Cells[7].Value.ToString();
+                string soLuong = dataGridView1.Rows[i].Cells[9].Value.ToString();
+
+                //Lấy mã nhà xuất bản từ tên nxb
+                query = "Select MaNXB from NhaXuatBan where TenNXB = N'" + tenNXB + "'";
+                string maNXB = Form1.getStringFromDB(query);
+                //Lấy mã tác giả từ tên tác giả
+                query = "Select MaTG from TacGia where TenTG = N'" + tenTG + "'";
+                string maTG = Form1.getStringFromDB(query);
+                //Nếu tác giả chưa tồn tại trong cơ sơ dữ liệu -> insert thêm 
+                if(maTG == "")
+                {
+                    query = "Select top (1) MaTG from TacGia order by MaTG desc";
+                    maTG = (Int32.Parse(Form1.getStringFromDB(query)) + 1).ToString();
+                    query = "Insert into TacGia values (" + maTG + ", N'" + tenTG + "','')";
+                    Form1.executeQuery(query);
+                }
+                //Lấy mã thể loại từ tên thể loại
+                query = "Select MaTL from TheLoai where TenTL = N'" + theLoai + "'";
+                string maTL = Form1.getStringFromDB(query);
+                //Insert dòng tương ứng vào database
+                query = "Insert into Sach values (" + maSach + ", N'" + tenSach + "'," + maTL + "," + maNXB + "," + maTG + "," + maKe + ",'" + namXB + "')";
+                Form1.executeQuery(query);
+                //Update số lượng sách vào kệ sách
+                query = "Select SLSach from Ke where MaKe = " + maKe;
+                string soLuongSach = (Int32.Parse(Form1.getStringFromDB(query)) + Int32.Parse(soLuong)).ToString();
+                query = "Update Ke set SLSach = " + soLuongSach + "where MaKe = " + maKe;
+                Form1.executeQuery(query);
+            }
+           
+
         }
     }
 }
