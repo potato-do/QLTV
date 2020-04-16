@@ -51,6 +51,7 @@ namespace QLTV
         private void btnXoa_Click(object sender, EventArgs e)
         {
             deleteData();
+            btnReload_Click(sender, e);
         }
 
         private void btnSua_Click(object sender, EventArgs e)

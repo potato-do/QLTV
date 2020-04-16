@@ -83,3 +83,5 @@ C:\Users\ADMIN\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.csproj.CopyComplet
 C:\Users\ADMIN\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.exe
 C:\Users\ADMIN\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.pdb
 C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.FormTraSach.resources
+C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.nhanVien.resources
+C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themNhanVien.resources
