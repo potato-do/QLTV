@@ -32,15 +32,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtWebsite = new System.Windows.Forms.TextBox();
+            this.cbNgaySinh = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.txtQueQuan = new System.Windows.Forms.TextBox();
             this.txtMaTG = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.website = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -50,11 +51,15 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnTimKiem = new System.Windows.Forms.ToolStripButton();
-            this.txtSearch = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.cbBoLoc = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.btnReload = new System.Windows.Forms.ToolStripButton();
+            this.MaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.website = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -66,8 +71,12 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.txtTen);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.txtWebsite);
+            this.panel2.Controls.Add(this.cbNgaySinh);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.cbGioiTinh);
+            this.panel2.Controls.Add(this.txtQueQuan);
             this.panel2.Controls.Add(this.txtMaTG);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(52, 23);
@@ -77,7 +86,7 @@
             // 
             // txtTen
             // 
-            this.txtTen.Location = new System.Drawing.Point(720, 22);
+            this.txtTen.Location = new System.Drawing.Point(720, 8);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(127, 20);
             this.txtTen.TabIndex = 6;
@@ -85,40 +94,74 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(627, 25);
+            this.label5.Location = new System.Drawing.Point(627, 11);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Họ và tên";
             // 
-            // txtWebsite
+            // cbNgaySinh
             // 
-            this.txtWebsite.Location = new System.Drawing.Point(315, 77);
-            this.txtWebsite.Name = "txtWebsite";
-            this.txtWebsite.Size = new System.Drawing.Size(218, 20);
-            this.txtWebsite.TabIndex = 1;
+            this.cbNgaySinh.FormattingEnabled = true;
+            this.cbNgaySinh.Location = new System.Drawing.Point(720, 46);
+            this.cbNgaySinh.Name = "cbNgaySinh";
+            this.cbNgaySinh.Size = new System.Drawing.Size(127, 21);
+            this.cbNgaySinh.TabIndex = 4;
+            this.cbNgaySinh.SelectedIndexChanged += new System.EventHandler(this.cbNhaXB_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(627, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Ngày sinh";
+            // 
+            // cbGioiTinh
+            // 
+            this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Location = new System.Drawing.Point(315, 47);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Size = new System.Drawing.Size(116, 21);
+            this.cbGioiTinh.TabIndex = 2;
+            // 
+            // txtQueQuan
+            // 
+            this.txtQueQuan.Location = new System.Drawing.Point(315, 85);
+            this.txtQueQuan.Name = "txtQueQuan";
+            this.txtQueQuan.Size = new System.Drawing.Size(218, 20);
+            this.txtQueQuan.TabIndex = 1;
             // 
             // txtMaTG
             // 
-            this.txtMaTG.Location = new System.Drawing.Point(315, 22);
+            this.txtMaTG.Location = new System.Drawing.Point(315, 8);
             this.txtMaTG.Name = "txtMaTG";
             this.txtMaTG.Size = new System.Drawing.Size(116, 20);
             this.txtMaTG.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(211, 50);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Giới tính";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(211, 80);
+            this.label2.Location = new System.Drawing.Point(211, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Website";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Text = "Quê quán";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(211, 25);
+            this.label1.Location = new System.Drawing.Point(211, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 0;
@@ -149,34 +192,13 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaTG,
             this.TenTG,
-            this.website});
+            this.website,
+            this.SLSach});
             this.dataGridView1.Location = new System.Drawing.Point(52, 216);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 6;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // MaTG
-            // 
-            this.MaTG.DataPropertyName = "MaTG";
-            this.MaTG.HeaderText = "Mã tác giả";
-            this.MaTG.Name = "MaTG";
-            this.MaTG.ReadOnly = true;
-            // 
-            // TenTG
-            // 
-            this.TenTG.DataPropertyName = "TenTG";
-            this.TenTG.HeaderText = "Tên Tác Giả";
-            this.TenTG.Name = "TenTG";
-            this.TenTG.ReadOnly = true;
-            // 
-            // website
-            // 
-            this.website.DataPropertyName = "website";
-            this.website.HeaderText = "Website";
-            this.website.Name = "website";
-            this.website.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -192,10 +214,10 @@
             this.toolStripSeparator3,
             this.toolStripSeparator4,
             this.btnTimKiem,
-            this.txtSearch,
+            this.toolStripTextBox1,
             this.toolStripSeparator5,
             this.toolStripSeparator6,
-            this.cbBoLoc,
+            this.toolStripComboBox1,
             this.btnReload});
             this.toolStrip1.Location = new System.Drawing.Point(52, 158);
             this.toolStrip1.Name = "toolStrip1";
@@ -227,7 +249,6 @@
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(80, 40);
             this.btnSua.Text = "Chỉnh sửa";
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // toolStripSeparator2
             // 
@@ -264,16 +285,15 @@
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(80, 20);
             this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // txtSearch
+            // toolStripTextBox1
             // 
-            this.txtSearch.AutoSize = false;
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(1, 0, 30, 0);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(300, 23);
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.Margin = new System.Windows.Forms.Padding(1, 0, 30, 0);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(300, 23);
             // 
             // toolStripSeparator5
             // 
@@ -285,14 +305,13 @@
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 43);
             // 
-            // cbBoLoc
+            // toolStripComboBox1
             // 
-            this.cbBoLoc.AutoSize = false;
-            this.cbBoLoc.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
-            this.cbBoLoc.Margin = new System.Windows.Forms.Padding(30, 0, 1, 0);
-            this.cbBoLoc.Name = "cbBoLoc";
-            this.cbBoLoc.Size = new System.Drawing.Size(150, 23);
-            this.cbBoLoc.Click += new System.EventHandler(this.cbBoLoc_Click);
+            this.toolStripComboBox1.AutoSize = false;
+            this.toolStripComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+            this.toolStripComboBox1.Margin = new System.Windows.Forms.Padding(30, 0, 1, 0);
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(150, 23);
             // 
             // btnReload
             // 
@@ -305,6 +324,33 @@
             this.btnReload.Text = "toolStripButton1";
             this.btnReload.ToolTipText = "tải lại trang";
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            // 
+            // MaTG
+            // 
+            this.MaTG.DataPropertyName = "MaTG";
+            this.MaTG.HeaderText = "Mã tác giả";
+            this.MaTG.Name = "MaTG";
+            this.MaTG.ReadOnly = true;
+            // 
+            // TenTG
+            // 
+            this.TenTG.DataPropertyName = "TenTG";
+            this.TenTG.HeaderText = "Tên Tác Giả";
+            this.TenTG.Name = "TenTG";
+            this.TenTG.ReadOnly = true;
+            // 
+            // website
+            // 
+            this.website.DataPropertyName = "website";
+            this.website.HeaderText = "Website";
+            this.website.Name = "website";
+            this.website.ReadOnly = true;
+            // 
+            // SLSach
+            // 
+            this.SLSach.HeaderText = "Số lượng sách";
+            this.SLSach.Name = "SLSach";
+            this.SLSach.ReadOnly = true;
             // 
             // tacGia
             // 
@@ -330,8 +376,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtWebsite;
+        private System.Windows.Forms.ComboBox cbNgaySinh;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbGioiTinh;
+        private System.Windows.Forms.TextBox txtQueQuan;
         private System.Windows.Forms.TextBox txtMaTG;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
@@ -345,13 +395,14 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnTimKiem;
-        private System.Windows.Forms.ToolStripTextBox txtSearch;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripComboBox cbBoLoc;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.ToolStripButton btnReload;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTG;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTG;
         private System.Windows.Forms.DataGridViewTextBoxColumn website;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SLSach;
     }
 }

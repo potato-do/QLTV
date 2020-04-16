@@ -31,14 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(thuvien));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SLSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NamXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -48,10 +40,10 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnTimKiem = new System.Windows.Forms.ToolStripButton();
-            this.txtSearch = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.cbBoLoc = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.btnReload = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtSL = new System.Windows.Forms.TextBox();
@@ -73,6 +65,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -111,62 +111,6 @@
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // MaSach
-            // 
-            this.MaSach.DataPropertyName = "MaSach";
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.Name = "MaSach";
-            this.MaSach.ReadOnly = true;
-            // 
-            // TenSach
-            // 
-            this.TenSach.DataPropertyName = "TenSach";
-            this.TenSach.HeaderText = "Tên sách";
-            this.TenSach.Name = "TenSach";
-            this.TenSach.ReadOnly = true;
-            // 
-            // TenTG
-            // 
-            this.TenTG.DataPropertyName = "TenTG";
-            this.TenTG.HeaderText = "Tác giả";
-            this.TenTG.Name = "TenTG";
-            this.TenTG.ReadOnly = true;
-            // 
-            // TenNXB
-            // 
-            this.TenNXB.DataPropertyName = "TenNXB";
-            this.TenNXB.HeaderText = "Nhà xuất bản";
-            this.TenNXB.Name = "TenNXB";
-            this.TenNXB.ReadOnly = true;
-            // 
-            // MaKe
-            // 
-            this.MaKe.DataPropertyName = "MaKe";
-            this.MaKe.HeaderText = "Kệ";
-            this.MaKe.Name = "MaKe";
-            this.MaKe.ReadOnly = true;
-            // 
-            // TenTL
-            // 
-            this.TenTL.DataPropertyName = "TenTL";
-            this.TenTL.HeaderText = "Thể loại";
-            this.TenTL.Name = "TenTL";
-            this.TenTL.ReadOnly = true;
-            // 
-            // SLSach
-            // 
-            this.SLSach.DataPropertyName = "soLuong";
-            this.SLSach.HeaderText = "Số lượng";
-            this.SLSach.Name = "SLSach";
-            this.SLSach.ReadOnly = true;
-            // 
-            // NamXB
-            // 
-            this.NamXB.DataPropertyName = "NamXuatBan";
-            this.NamXB.HeaderText = "Năm xuất bản";
-            this.NamXB.Name = "NamXB";
-            this.NamXB.ReadOnly = true;
-            // 
             // toolStrip1
             // 
             this.toolStrip1.AutoSize = false;
@@ -180,10 +124,10 @@
             this.toolStripSeparator3,
             this.toolStripSeparator4,
             this.btnTimKiem,
-            this.txtSearch,
+            this.toolStripTextBox1,
             this.toolStripSeparator5,
             this.toolStripSeparator6,
-            this.cbBoLoc,
+            this.toolStripComboBox1,
             this.btnReload});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -252,16 +196,15 @@
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(80, 20);
             this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // txtSearch
+            // toolStripTextBox1
             // 
-            this.txtSearch.AutoSize = false;
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(1, 0, 30, 0);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(300, 23);
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.Margin = new System.Windows.Forms.Padding(1, 0, 30, 0);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(300, 23);
             // 
             // toolStripSeparator5
             // 
@@ -273,13 +216,13 @@
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 43);
             // 
-            // cbBoLoc
+            // toolStripComboBox1
             // 
-            this.cbBoLoc.AutoSize = false;
-            this.cbBoLoc.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
-            this.cbBoLoc.Margin = new System.Windows.Forms.Padding(30, 0, 1, 0);
-            this.cbBoLoc.Name = "cbBoLoc";
-            this.cbBoLoc.Size = new System.Drawing.Size(150, 23);
+            this.toolStripComboBox1.AutoSize = false;
+            this.toolStripComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+            this.toolStripComboBox1.Margin = new System.Windows.Forms.Padding(30, 0, 1, 0);
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(150, 23);
             // 
             // btnReload
             // 
@@ -484,6 +427,62 @@
             this.bunifuCards1.TabIndex = 2;
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
             // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "MaSach";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            // 
+            // TenSach
+            // 
+            this.TenSach.DataPropertyName = "TenSach";
+            this.TenSach.HeaderText = "Tên sách";
+            this.TenSach.Name = "TenSach";
+            this.TenSach.ReadOnly = true;
+            // 
+            // TenTG
+            // 
+            this.TenTG.DataPropertyName = "TenTG";
+            this.TenTG.HeaderText = "Tác giả";
+            this.TenTG.Name = "TenTG";
+            this.TenTG.ReadOnly = true;
+            // 
+            // TenNXB
+            // 
+            this.TenNXB.DataPropertyName = "TenNXB";
+            this.TenNXB.HeaderText = "Nhà xuất bản";
+            this.TenNXB.Name = "TenNXB";
+            this.TenNXB.ReadOnly = true;
+            // 
+            // MaKe
+            // 
+            this.MaKe.DataPropertyName = "MaKe";
+            this.MaKe.HeaderText = "Kệ";
+            this.MaKe.Name = "MaKe";
+            this.MaKe.ReadOnly = true;
+            // 
+            // TenTL
+            // 
+            this.TenTL.DataPropertyName = "TenTL";
+            this.TenTL.HeaderText = "Thể loại";
+            this.TenTL.Name = "TenTL";
+            this.TenTL.ReadOnly = true;
+            // 
+            // SLSach
+            // 
+            this.SLSach.DataPropertyName = "soLuong";
+            this.SLSach.HeaderText = "Số lượng";
+            this.SLSach.Name = "SLSach";
+            this.SLSach.ReadOnly = true;
+            // 
+            // NamXB
+            // 
+            this.NamXB.DataPropertyName = "NamXuatBan";
+            this.NamXB.HeaderText = "Năm xuất bản";
+            this.NamXB.Name = "NamXB";
+            this.NamXB.ReadOnly = true;
+            // 
             // thuvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -516,10 +515,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnTimKiem;
-        private System.Windows.Forms.ToolStripTextBox txtSearch;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripComboBox cbBoLoc;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cbTheLoai;
         private System.Windows.Forms.TextBox txtTenS;

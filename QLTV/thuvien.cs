@@ -31,13 +31,6 @@ namespace QLTV
                     + " join NhaXuatBan as nxb on s.MaNXB = nxb.MaNXB join TheLoai as tl on tl.MaTL = s.MaTL"
                     + " join TacGia as tg on tg.MaTG = s.MaTG join Ke as k on k.MaKe = s.MaKe";
             Form1.renderData(query, dataGridView1);
-
-            cbBoLoc.Items.Add("Mã sách");
-            cbBoLoc.Items.Add("Tên sách");
-            cbBoLoc.Items.Add("Loại sách");
-            cbBoLoc.Items.Add("Tác giả");
-            cbBoLoc.Items.Add("Nhà xuất bản");
-            cbBoLoc.Items.Add("Kệ");
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -64,11 +57,6 @@ namespace QLTV
         private void btnSua_Click(object sender, EventArgs e)
         {
             updateData();
-        }
-
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            searchBook();
         }
 
         //Xóa sách khỏi database
@@ -160,55 +148,6 @@ namespace QLTV
 
             query = "Update Ke SLSach = ";
             MessageBox.Show("Cập nhật thông tin thành công!!");
-        }
-
-        private void searchBook()
-        {
-            string query;
-            string text = txtSearch.Text;
-            if(cbBoLoc.SelectedIndex == 0)
-            {
-                query = "Select s.MaSach, s.TenSach, tg.TenTG, tl.TenTL, nxb.TenNXB, k.MaKe, s.soLuong, s.NamXuatBan from Sach as s "
-                   + " join NhaXuatBan as nxb on s.MaNXB = nxb.MaNXB join TheLoai as tl on tl.MaTL = s.MaTL"
-                   + " join TacGia as tg on tg.MaTG = s.MaTG join Ke as k on k.MaKe = s.MaKe where s.MaSach like '%" + text + "%'";
-                Form1.renderData(query, dataGridView1);
-            }
-            if (cbBoLoc.SelectedIndex == 1)
-            {
-                query = "Select s.MaSach, s.TenSach, tg.TenTG, tl.TenTL, nxb.TenNXB, k.MaKe, s.soLuong, s.NamXuatBan from Sach as s "
-                   + " join NhaXuatBan as nxb on s.MaNXB = nxb.MaNXB join TheLoai as tl on tl.MaTL = s.MaTL"
-                   + " join TacGia as tg on tg.MaTG = s.MaTG join Ke as k on k.MaKe = s.MaKe where s.TenSach like '%" + text + "%'";
-                Form1.renderData(query, dataGridView1);
-            }
-            if (cbBoLoc.SelectedIndex == 2)
-            {
-                query = "Select s.MaSach, s.TenSach, tg.TenTG, tl.TenTL, nxb.TenNXB, k.MaKe, s.soLuong, s.NamXuatBan from Sach as s "
-                   + " join NhaXuatBan as nxb on s.MaNXB = nxb.MaNXB join TheLoai as tl on tl.MaTL = s.MaTL"
-                   + " join TacGia as tg on tg.MaTG = s.MaTG join Ke as k on k.MaKe = s.MaKe where tl.TenTL like '%" + text + "%'";
-                Form1.renderData(query, dataGridView1);
-            }
-            if (cbBoLoc.SelectedIndex == 3)
-            {
-                query = "Select s.MaSach, s.TenSach, tg.TenTG, tl.TenTL, nxb.TenNXB, k.MaKe, s.soLuong, s.NamXuatBan from Sach as s "
-                   + " join NhaXuatBan as nxb on s.MaNXB = nxb.MaNXB join TheLoai as tl on tl.MaTL = s.MaTL"
-                   + " join TacGia as tg on tg.MaTG = s.MaTG join Ke as k on k.MaKe = s.MaKe where tg.TenTG like '%" + text + "%'";
-                Form1.renderData(query, dataGridView1);
-            }
-            if (cbBoLoc.SelectedIndex == 4)
-            {
-                query = "Select s.MaSach, s.TenSach, tg.TenTG, tl.TenTL, nxb.TenNXB, k.MaKe, s.soLuong, s.NamXuatBan from Sach as s "
-                   + " join NhaXuatBan as nxb on s.MaNXB = nxb.MaNXB join TheLoai as tl on tl.MaTL = s.MaTL"
-                   + " join TacGia as tg on tg.MaTG = s.MaTG join Ke as k on k.MaKe = s.MaKe where nxb.TenNXB like '%" + text + "%'";
-                Form1.renderData(query, dataGridView1);
-            }
-            if (cbBoLoc.SelectedIndex == 5)
-            {
-                query = "Select s.MaSach, s.TenSach, tg.TenTG, tl.TenTL, nxb.TenNXB, k.MaKe, s.soLuong, s.NamXuatBan from Sach as s "
-                   + " join NhaXuatBan as nxb on s.MaNXB = nxb.MaNXB join TheLoai as tl on tl.MaTL = s.MaTL"
-                   + " join TacGia as tg on tg.MaTG = s.MaTG join Ke as k on k.MaKe = s.MaKe where k.MaKe like '%" + text + "%'";
-                Form1.renderData(query, dataGridView1);
-            }
-
         }
 
         
