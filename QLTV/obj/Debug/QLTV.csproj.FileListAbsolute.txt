@@ -82,3 +82,6 @@ C:\Users\ADMIN\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.csproj.CoreCompile
 C:\Users\ADMIN\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.csproj.CopyComplete
 C:\Users\ADMIN\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.exe
 C:\Users\ADMIN\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.pdb
+C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.formthemTG.resources
+C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.nhanVien.resources
+C:\Users\nguye\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themNhanVien.resources
