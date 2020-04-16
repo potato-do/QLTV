@@ -72,6 +72,12 @@
     <Compile Include="formthemTG.Designer.cs">
       <DependentUpon>formthemTG.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTraSach.Designer.cs">
+      <DependentUpon>FormTraSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="keSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formthemTG.resx">
       <DependentUpon>formthemTG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTraSach.resx">
+      <DependentUpon>FormTraSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="keSach.resx">
       <DependentUpon>keSach.cs</DependentUpon>

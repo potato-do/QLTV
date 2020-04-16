@@ -42,14 +42,14 @@
             this.labelGT = new System.Windows.Forms.Label();
             this.labelMaDG = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cbNhanVien = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dtNgayTra = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbTenS = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtMaS = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.cbTenS = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtNgayTra = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbNhanVien = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -158,7 +158,7 @@
             // 
             // dtNgayMuon
             // 
-            this.dtNgayMuon.Location = new System.Drawing.Point(729, 59);
+            this.dtNgayMuon.Location = new System.Drawing.Point(738, 59);
             this.dtNgayMuon.Name = "dtNgayMuon";
             this.dtNgayMuon.Size = new System.Drawing.Size(200, 20);
             this.dtNgayMuon.TabIndex = 9;
@@ -266,38 +266,21 @@
             this.panel2.Size = new System.Drawing.Size(1030, 187);
             this.panel2.TabIndex = 16;
             // 
-            // cbNhanVien
+            // txtMaS
             // 
-            this.cbNhanVien.FormattingEnabled = true;
-            this.cbNhanVien.Location = new System.Drawing.Point(107, 59);
-            this.cbNhanVien.Name = "cbNhanVien";
-            this.cbNhanVien.Size = new System.Drawing.Size(146, 21);
-            this.cbNhanVien.TabIndex = 2;
+            this.txtMaS.Location = new System.Drawing.Point(402, 14);
+            this.txtMaS.Name = "txtMaS";
+            this.txtMaS.Size = new System.Drawing.Size(146, 20);
+            this.txtMaS.TabIndex = 18;
             // 
-            // panel1
+            // label3
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1124, 5);
-            this.panel1.TabIndex = 18;
-            // 
-            // dtNgayTra
-            // 
-            this.dtNgayTra.Location = new System.Drawing.Point(729, 99);
-            this.dtNgayTra.Name = "dtNgayTra";
-            this.dtNgayTra.Size = new System.Drawing.Size(200, 20);
-            this.dtNgayTra.TabIndex = 14;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(662, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Ngày trả";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(322, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Mã đầu sách";
             // 
             // cbTenS
             // 
@@ -315,21 +298,38 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Tên đầu sách";
             // 
-            // txtMaS
+            // dtNgayTra
             // 
-            this.txtMaS.Location = new System.Drawing.Point(402, 14);
-            this.txtMaS.Name = "txtMaS";
-            this.txtMaS.Size = new System.Drawing.Size(146, 20);
-            this.txtMaS.TabIndex = 18;
+            this.dtNgayTra.Location = new System.Drawing.Point(738, 99);
+            this.dtNgayTra.Name = "dtNgayTra";
+            this.dtNgayTra.Size = new System.Drawing.Size(200, 20);
+            this.dtNgayTra.TabIndex = 14;
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(322, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Mã đầu sách";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(662, 102);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Ngày dự kiến";
+            // 
+            // cbNhanVien
+            // 
+            this.cbNhanVien.FormattingEnabled = true;
+            this.cbNhanVien.Location = new System.Drawing.Point(107, 59);
+            this.cbNhanVien.Name = "cbNhanVien";
+            this.cbNhanVien.Size = new System.Drawing.Size(146, 21);
+            this.cbNhanVien.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1124, 5);
+            this.panel1.TabIndex = 18;
             // 
             // muonSachForm
             // 

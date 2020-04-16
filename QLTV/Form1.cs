@@ -154,6 +154,9 @@ namespace QLTV
         }
         private void btnTra_Click(object sender, EventArgs e)
         {
+            FormTraSach traSach = new FormTraSach();
+            traSach.Show();
+            btnCloseM_Click(sender,e);
             hidebutton();
         }
         private void btnTheoDoi_Click(object sender, EventArgs e)

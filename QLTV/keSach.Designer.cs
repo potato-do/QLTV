@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(keSach));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MaKe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChatLieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SucChua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -55,10 +59,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.MaKe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChatLieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SucChua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SLSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -92,6 +92,34 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 14;
+            // 
+            // MaKe
+            // 
+            this.MaKe.DataPropertyName = "MaKe";
+            this.MaKe.HeaderText = "Mã kệ sách";
+            this.MaKe.Name = "MaKe";
+            this.MaKe.Width = 145;
+            // 
+            // ChatLieu
+            // 
+            this.ChatLieu.DataPropertyName = "ChatLieu";
+            this.ChatLieu.HeaderText = "Chất liệu";
+            this.ChatLieu.Name = "ChatLieu";
+            this.ChatLieu.Width = 293;
+            // 
+            // SucChua
+            // 
+            this.SucChua.DataPropertyName = "SLChua";
+            this.SucChua.HeaderText = "Sức chứa";
+            this.SucChua.Name = "SucChua";
+            this.SucChua.Width = 294;
+            // 
+            // SLSach
+            // 
+            this.SLSach.DataPropertyName = "SLSach";
+            this.SLSach.HeaderText = "Số lượng sách";
+            this.SLSach.Name = "SLSach";
+            this.SLSach.Width = 293;
             // 
             // toolStrip1
             // 
@@ -188,6 +216,7 @@
             this.toolStripTextBox1.Margin = new System.Windows.Forms.Padding(1, 0, 30, 0);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(300, 23);
+            this.toolStripTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox1_KeyDown);
             // 
             // toolStripSeparator5
             // 
@@ -202,10 +231,15 @@
             // toolStripComboBox1
             // 
             this.toolStripComboBox1.AutoSize = false;
+            this.toolStripComboBox1.AutoToolTip = true;
             this.toolStripComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
             this.toolStripComboBox1.Margin = new System.Windows.Forms.Padding(30, 0, 1, 0);
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Size = new System.Drawing.Size(150, 23);
+            this.toolStripComboBox1.Text = "Chọn số lượng";
+            this.toolStripComboBox1.ToolTipText = "Chọn số lượng";
+            this.toolStripComboBox1.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox1_SelectedIndexChanged);
+            this.toolStripComboBox1.Click += new System.EventHandler(this.toolStripComboBox1_Click);
             // 
             // btnReload
             // 
@@ -310,34 +344,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1140, 5);
             this.panel2.TabIndex = 0;
-            // 
-            // MaKe
-            // 
-            this.MaKe.DataPropertyName = "MaKe";
-            this.MaKe.HeaderText = "Mã kệ sách";
-            this.MaKe.Name = "MaKe";
-            this.MaKe.Width = 145;
-            // 
-            // ChatLieu
-            // 
-            this.ChatLieu.DataPropertyName = "ChatLieu";
-            this.ChatLieu.HeaderText = "Chất liệu";
-            this.ChatLieu.Name = "ChatLieu";
-            this.ChatLieu.Width = 293;
-            // 
-            // SucChua
-            // 
-            this.SucChua.DataPropertyName = "SLChua";
-            this.SucChua.HeaderText = "Sức chứa";
-            this.SucChua.Name = "SucChua";
-            this.SucChua.Width = 294;
-            // 
-            // SLSach
-            // 
-            this.SLSach.DataPropertyName = "SLSach";
-            this.SLSach.HeaderText = "Số lượng sách";
-            this.SLSach.Name = "SLSach";
-            this.SLSach.Width = 293;
             // 
             // keSach
             // 

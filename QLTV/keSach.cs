@@ -31,11 +31,22 @@ namespace QLTV
 
         private void keSach_Load(object sender, EventArgs e)
         {
+
+            var dap = new SqlDataAdapter(@"select DISTINCT SLChua from Ke", Form1.conn);
+            var tb = new DataTable();
+            dap.Fill(tb);
+            toolStripComboBox1.ComboBox.DisplayMember = "SLChua";
+            toolStripComboBox1.ComboBox.ValueMember = "SLChua";
+            toolStripComboBox1.ComboBox.DataSource = tb;
+            toolStripComboBox1.SelectedIndex = -1;
+
             //đổ dữ liệu ra bảng
             var adap = new SqlDataAdapter(@"select * from Ke", Form1.conn);
             var table = new DataTable();
             adap.Fill(table);
             dataGridView1.DataSource = table;
+            
+          
 
             //đổ dữ liệu ra box
             txtMaKe.DataBindings.Clear();
@@ -46,6 +57,9 @@ namespace QLTV
             txtSucChua.DataBindings.Add("text", dataGridView1.DataSource, "SLChua");
             txtSLSach.DataBindings.Clear();
             txtSLSach.DataBindings.Add("text", dataGridView1.DataSource, "SLSach");
+
+
+
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -77,6 +91,33 @@ namespace QLTV
                 
             }
             keSach_Load(sender, e);
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+            
+            
+            
+        }
+
+        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var da = new SqlDataAdapter(@"select * from Ke where SLChua = '" + toolStripComboBox1.ComboBox.Text + "'", Form1.conn);
+            var tb = new DataTable();
+            da.Fill(tb);
+            dataGridView1.DataSource = tb;
+        }
+
+        private void toolStripTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                var adap = new SqlDataAdapter(@"select * from Ke where MaKe = '" + toolStripTextBox1.TextBox.Text + "'", Form1.conn);
+                var table = new DataTable();
+                adap.Fill(table);
+                dataGridView1.DataSource = table;
+            }
+            toolStripTextBox1.TextBox.Clear();
         }
     }
 }
