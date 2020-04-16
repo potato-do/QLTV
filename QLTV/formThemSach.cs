@@ -140,15 +140,18 @@ namespace QLTV
                 query = "Select MaTL from TheLoai where TenTL = N'" + theLoai + "'";
                 string maTL = Form1.getStringFromDB(query);
                 //Insert dòng tương ứng vào database
-                query = "Insert into Sach values (" + maSach + ", N'" + tenSach + "'," + maTL + "," + maNXB + "," + maTG + "," + maKe + ",'" + namXB + "')";
+                query = "Insert into Sach values (" + maSach + ", N'" + tenSach + "'," + maTL + "," + maKe + "," + maNXB + "," + maTG + ",'" + namXB + "'," + soLuong + ")";
+                MessageBox.Show(query);
                 Form1.executeQuery(query);
                 //Update số lượng sách vào kệ sách
                 query = "Select SLSach from Ke where MaKe = " + maKe;
                 string soLuongSach = (Int32.Parse(Form1.getStringFromDB(query)) + Int32.Parse(soLuong)).ToString();
                 query = "Update Ke set SLSach = " + soLuongSach + "where MaKe = " + maKe;
                 Form1.executeQuery(query);
+                MessageBox.Show("Đã lưu dữ liệu thành công");
             }
            
+
 
         }
     }

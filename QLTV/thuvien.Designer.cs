@@ -31,13 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(thuvien));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SLSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -72,6 +65,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -97,65 +98,18 @@
             this.MaSach,
             this.TenSach,
             this.TenTG,
-            this.TenTL,
             this.TenNXB,
             this.MaKe,
-            this.SLSach});
+            this.TenTL,
+            this.SLSach,
+            this.NamXB});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 59);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // MaSach
-            // 
-            this.MaSach.DataPropertyName = "MaSach";
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.Name = "MaSach";
-            this.MaSach.ReadOnly = true;
-            // 
-            // TenSach
-            // 
-            this.TenSach.DataPropertyName = "TenSach";
-            this.TenSach.HeaderText = "Tên sách";
-            this.TenSach.Name = "TenSach";
-            this.TenSach.ReadOnly = true;
-            // 
-            // TenTG
-            // 
-            this.TenTG.DataPropertyName = "TenTG";
-            this.TenTG.HeaderText = "Tác giả";
-            this.TenTG.Name = "TenTG";
-            this.TenTG.ReadOnly = true;
-            // 
-            // TenTL
-            // 
-            this.TenTL.DataPropertyName = "TenTL";
-            this.TenTL.HeaderText = "Thể loại";
-            this.TenTL.Name = "TenTL";
-            this.TenTL.ReadOnly = true;
-            // 
-            // TenNXB
-            // 
-            this.TenNXB.DataPropertyName = "TenNXB";
-            this.TenNXB.HeaderText = "Nhà xuất bản";
-            this.TenNXB.Name = "TenNXB";
-            this.TenNXB.ReadOnly = true;
-            // 
-            // MaKe
-            // 
-            this.MaKe.DataPropertyName = "MaKe";
-            this.MaKe.HeaderText = "Kệ";
-            this.MaKe.Name = "MaKe";
-            this.MaKe.ReadOnly = true;
-            // 
-            // SLSach
-            // 
-            this.SLSach.DataPropertyName = "SLSach";
-            this.SLSach.HeaderText = "Số lượng";
-            this.SLSach.Name = "SLSach";
-            this.SLSach.ReadOnly = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // toolStrip1
             // 
@@ -205,6 +159,7 @@
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(80, 40);
             this.btnSua.Text = "Chỉnh sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // toolStripSeparator2
             // 
@@ -423,6 +378,7 @@
             // 
             // txtMaS
             // 
+            this.txtMaS.Enabled = false;
             this.txtMaS.Location = new System.Drawing.Point(137, 8);
             this.txtMaS.Name = "txtMaS";
             this.txtMaS.Size = new System.Drawing.Size(116, 20);
@@ -470,6 +426,62 @@
             this.bunifuCards1.Size = new System.Drawing.Size(1140, 680);
             this.bunifuCards1.TabIndex = 2;
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
+            // 
+            // MaSach
+            // 
+            this.MaSach.DataPropertyName = "MaSach";
+            this.MaSach.HeaderText = "Mã sách";
+            this.MaSach.Name = "MaSach";
+            this.MaSach.ReadOnly = true;
+            // 
+            // TenSach
+            // 
+            this.TenSach.DataPropertyName = "TenSach";
+            this.TenSach.HeaderText = "Tên sách";
+            this.TenSach.Name = "TenSach";
+            this.TenSach.ReadOnly = true;
+            // 
+            // TenTG
+            // 
+            this.TenTG.DataPropertyName = "TenTG";
+            this.TenTG.HeaderText = "Tác giả";
+            this.TenTG.Name = "TenTG";
+            this.TenTG.ReadOnly = true;
+            // 
+            // TenNXB
+            // 
+            this.TenNXB.DataPropertyName = "TenNXB";
+            this.TenNXB.HeaderText = "Nhà xuất bản";
+            this.TenNXB.Name = "TenNXB";
+            this.TenNXB.ReadOnly = true;
+            // 
+            // MaKe
+            // 
+            this.MaKe.DataPropertyName = "MaKe";
+            this.MaKe.HeaderText = "Kệ";
+            this.MaKe.Name = "MaKe";
+            this.MaKe.ReadOnly = true;
+            // 
+            // TenTL
+            // 
+            this.TenTL.DataPropertyName = "TenTL";
+            this.TenTL.HeaderText = "Thể loại";
+            this.TenTL.Name = "TenTL";
+            this.TenTL.ReadOnly = true;
+            // 
+            // SLSach
+            // 
+            this.SLSach.DataPropertyName = "soLuong";
+            this.SLSach.HeaderText = "Số lượng";
+            this.SLSach.Name = "SLSach";
+            this.SLSach.ReadOnly = true;
+            // 
+            // NamXB
+            // 
+            this.NamXB.DataPropertyName = "NamXuatBan";
+            this.NamXB.HeaderText = "Năm xuất bản";
+            this.NamXB.Name = "NamXB";
+            this.NamXB.ReadOnly = true;
             // 
             // thuvien
             // 
@@ -531,9 +543,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTL;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNXB;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTL;
         private System.Windows.Forms.DataGridViewTextBoxColumn SLSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamXB;
     }
 }
