@@ -29,6 +29,10 @@ namespace QLTV
             string query;
             query = "Select * from NhaXuatBan";
             Form1.renderData(query, dataGridView1);
+
+            cbBoLoc.Items.Add("Mã nhà cung cấp");
+            cbBoLoc.Items.Add("Tên nhà cung cấp");
+            cbBoLoc.Items.Add("Email");
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -52,6 +56,11 @@ namespace QLTV
         private void btnSua_Click(object sender, EventArgs e)
         {
             updateData();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            Search();
         }
 
         //Xóa nhà xuất bản khỏi database
@@ -97,6 +106,27 @@ namespace QLTV
             query = "Update NhaXuatBan set TenNXB = N'" + tenNXB + "', DiaChi = N'" + diaChi + "', Email = '" + mail + "', SDT =" + sdt + " where MaNXB = " + maNXB;
             Form1.executeQuery(query);
             MessageBox.Show("Cập nhật dữ liệu thành công!!");
+        }
+
+        private void Search()
+        {
+            string query;
+            string text = txtSearch.Text;
+            if(cbBoLoc.SelectedIndex == 0)
+            {
+                query = "Select * from NhaXuatBan where MaNXB like '%" + text + "%'";
+                Form1.renderData(query, dataGridView1);
+            }
+            if (cbBoLoc.SelectedIndex == 1)
+            {
+                query = "Select * from NhaXuatBan where TenNXB like '%" + text + "%'";
+                Form1.renderData(query, dataGridView1);
+            }
+            if (cbBoLoc.SelectedIndex == 0)
+            {
+                query = "Select * from NhaXuatBan where Email like '%" + text + "%'";
+                Form1.renderData(query, dataGridView1);
+            }
         }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(thanhVien));
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.cbBoLoc = new System.Windows.Forms.ToolStripComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtSDT = new System.Windows.Forms.TextBox();
@@ -44,7 +44,7 @@
             this.labelDiaChi = new System.Windows.Forms.Label();
             this.labelMaDG = new System.Windows.Forms.Label();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.txtSearch = new System.Windows.Forms.ToolStripTextBox();
             this.btnTimKiem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -71,13 +71,13 @@
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // toolStripComboBox1
+            // cbBoLoc
             // 
-            this.toolStripComboBox1.AutoSize = false;
-            this.toolStripComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
-            this.toolStripComboBox1.Margin = new System.Windows.Forms.Padding(30, 0, 1, 0);
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(150, 23);
+            this.cbBoLoc.AutoSize = false;
+            this.cbBoLoc.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+            this.cbBoLoc.Margin = new System.Windows.Forms.Padding(30, 0, 1, 0);
+            this.cbBoLoc.Name = "cbBoLoc";
+            this.cbBoLoc.Size = new System.Drawing.Size(150, 23);
             // 
             // panel2
             // 
@@ -202,14 +202,14 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 43);
             // 
-            // toolStripTextBox1
+            // txtSearch
             // 
-            this.toolStripTextBox1.AutoSize = false;
-            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripTextBox1.Margin = new System.Windows.Forms.Padding(1, 0, 30, 0);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(300, 23);
+            this.txtSearch.AutoSize = false;
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(1, 0, 30, 0);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(300, 23);
             // 
             // btnTimKiem
             // 
@@ -221,6 +221,7 @@
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(80, 20);
             this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // toolStripSeparator4
             // 
@@ -361,10 +362,10 @@
             this.toolStripSeparator3,
             this.toolStripSeparator4,
             this.btnTimKiem,
-            this.toolStripTextBox1,
+            this.txtSearch,
             this.toolStripSeparator5,
             this.toolStripSeparator6,
-            this.toolStripComboBox1,
+            this.cbBoLoc,
             this.btnReload});
             this.toolStrip1.Location = new System.Drawing.Point(52, 158);
             this.toolStrip1.Name = "toolStrip1";
@@ -427,10 +428,10 @@
 
         #endregion
 
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripComboBox cbBoLoc;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripTextBox txtSearch;
         private System.Windows.Forms.ToolStripButton btnTimKiem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
