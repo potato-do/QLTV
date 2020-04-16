@@ -137,11 +137,6 @@ namespace QLTV
        
         private void btn_NhanVien_click(object sender, EventArgs e)
         {
-            this.panelMain.Controls.Clear();
-            nhanVien n = new nhanVien();
-            this.panelMain.Controls.Add(n);
-            n.Show();
-            btnCloseM_Click(sender, e);
             hidebutton();
         }
 
