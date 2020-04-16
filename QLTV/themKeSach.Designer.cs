@@ -31,9 +31,7 @@
             this.btnLuu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnXoa = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnThemMoiKeSach = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.txtSLSach = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtChatLieu = new System.Windows.Forms.TextBox();
@@ -42,8 +40,14 @@
             this.txtMaKe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MaKe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChatLieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SucChua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLuu
@@ -79,6 +83,7 @@
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLuu.Textcolor = System.Drawing.Color.White;
             this.btnLuu.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -147,15 +152,7 @@
             this.btnThemMoiKeSach.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnThemMoiKeSach.Textcolor = System.Drawing.Color.White;
             this.btnThemMoiKeSach.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(52, 204);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1030, 431);
-            this.dataGridView1.TabIndex = 17;
+            this.btnThemMoiKeSach.Click += new System.EventHandler(this.btnThemMoiKeSach_Click);
             // 
             // panel2
             // 
@@ -176,15 +173,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1030, 187);
             this.panel2.TabIndex = 16;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1124, 5);
-            this.panel1.TabIndex = 18;
             // 
             // txtSLSach
             // 
@@ -229,6 +217,7 @@
             // 
             this.txtMaKe.Location = new System.Drawing.Point(164, 37);
             this.txtMaKe.Name = "txtMaKe";
+            this.txtMaKe.ReadOnly = true;
             this.txtMaKe.Size = new System.Drawing.Size(302, 20);
             this.txtMaKe.TabIndex = 21;
             // 
@@ -239,7 +228,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 18;
-            this.label2.Text = "Sứa chứa";
+            this.label2.Text = "Sức chứa";
             // 
             // label1
             // 
@@ -249,6 +238,55 @@
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 19;
             this.label1.Text = "Mã kệ sách";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1124, 5);
+            this.panel1.TabIndex = 18;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaKe,
+            this.ChatLieu,
+            this.SucChua,
+            this.SLSach});
+            this.dataGridView1.Location = new System.Drawing.Point(52, 218);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(1030, 411);
+            this.dataGridView1.TabIndex = 19;
+            // 
+            // MaKe
+            // 
+            this.MaKe.HeaderText = "Mã kệ sách";
+            this.MaKe.Name = "MaKe";
+            this.MaKe.Width = 145;
+            // 
+            // ChatLieu
+            // 
+            this.ChatLieu.HeaderText = "Chất liệu";
+            this.ChatLieu.Name = "ChatLieu";
+            this.ChatLieu.Width = 293;
+            // 
+            // SucChua
+            // 
+            this.SucChua.HeaderText = "Sức chứa";
+            this.SucChua.Name = "SucChua";
+            this.SucChua.Width = 294;
+            // 
+            // SLSach
+            // 
+            this.SLSach.HeaderText = "Số lượng sách";
+            this.SLSach.Name = "SLSach";
+            this.SLSach.Width = 293;
             // 
             // themKeSach
             // 
@@ -260,9 +298,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "themKeSach";
             this.Text = "themKeSach";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.themKeSach_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -272,7 +311,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnLuu;
         private Bunifu.Framework.UI.BunifuFlatButton btnXoa;
         private Bunifu.Framework.UI.BunifuFlatButton btnThemMoiKeSach;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtSLSach;
@@ -283,5 +321,10 @@
         private System.Windows.Forms.TextBox txtMaKe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ChatLieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SucChua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SLSach;
     }
 }

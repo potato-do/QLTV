@@ -55,6 +55,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.MaKe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChatLieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SucChua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -78,8 +82,14 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaKe,
+            this.ChatLieu,
+            this.SucChua,
+            this.SLSach});
             this.dataGridView1.Location = new System.Drawing.Point(55, 206);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 14;
             // 
@@ -132,6 +142,7 @@
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(80, 40);
             this.btnSua.Text = "Chỉnh sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // toolStripSeparator2
             // 
@@ -146,6 +157,7 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(64, 40);
             this.btnXoa.Text = "Xóa bỏ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // toolStripSeparator3
             // 
@@ -205,6 +217,7 @@
             this.btnReload.Size = new System.Drawing.Size(23, 40);
             this.btnReload.Text = "toolStripButton1";
             this.btnReload.ToolTipText = "tải lại trang";
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // panel3
             // 
@@ -227,6 +240,7 @@
             // 
             this.txtSLSach.Location = new System.Drawing.Point(626, 73);
             this.txtSLSach.Name = "txtSLSach";
+            this.txtSLSach.ReadOnly = true;
             this.txtSLSach.Size = new System.Drawing.Size(302, 20);
             this.txtSLSach.TabIndex = 17;
             // 
@@ -266,6 +280,7 @@
             // 
             this.txtMaKe.Location = new System.Drawing.Point(137, 25);
             this.txtMaKe.Name = "txtMaKe";
+            this.txtMaKe.ReadOnly = true;
             this.txtMaKe.Size = new System.Drawing.Size(302, 20);
             this.txtMaKe.TabIndex = 1;
             // 
@@ -296,6 +311,34 @@
             this.panel2.Size = new System.Drawing.Size(1140, 5);
             this.panel2.TabIndex = 0;
             // 
+            // MaKe
+            // 
+            this.MaKe.DataPropertyName = "MaKe";
+            this.MaKe.HeaderText = "Mã kệ sách";
+            this.MaKe.Name = "MaKe";
+            this.MaKe.Width = 145;
+            // 
+            // ChatLieu
+            // 
+            this.ChatLieu.DataPropertyName = "ChatLieu";
+            this.ChatLieu.HeaderText = "Chất liệu";
+            this.ChatLieu.Name = "ChatLieu";
+            this.ChatLieu.Width = 293;
+            // 
+            // SucChua
+            // 
+            this.SucChua.DataPropertyName = "SLChua";
+            this.SucChua.HeaderText = "Sức chứa";
+            this.SucChua.Name = "SucChua";
+            this.SucChua.Width = 294;
+            // 
+            // SLSach
+            // 
+            this.SLSach.DataPropertyName = "SLSach";
+            this.SLSach.HeaderText = "Số lượng sách";
+            this.SLSach.Name = "SLSach";
+            this.SLSach.Width = 293;
+            // 
             // keSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,6 +346,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "keSach";
             this.Size = new System.Drawing.Size(1140, 680);
+            this.Load += new System.EventHandler(this.keSach_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
@@ -341,5 +385,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripButton btnReload;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ChatLieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SucChua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SLSach;
     }
 }
