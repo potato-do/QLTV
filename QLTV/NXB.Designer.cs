@@ -42,6 +42,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MaNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -56,11 +61,6 @@
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.btnReload = new System.Windows.Forms.ToolStripButton();
-            this.MaNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -133,6 +133,7 @@
             // 
             // txtMaNXB
             // 
+            this.txtMaNXB.Enabled = false;
             this.txtMaNXB.Location = new System.Drawing.Point(315, 8);
             this.txtMaNXB.Name = "txtMaNXB";
             this.txtMaNXB.Size = new System.Drawing.Size(116, 20);
@@ -183,6 +184,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -193,8 +196,40 @@
             this.SDT});
             this.dataGridView1.Location = new System.Drawing.Point(52, 216);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // MaNXB
+            // 
+            this.MaNXB.DataPropertyName = "MaNXB";
+            this.MaNXB.HeaderText = "Mã nhà xuất bản";
+            this.MaNXB.Name = "MaNXB";
+            // 
+            // TenNXB
+            // 
+            this.TenNXB.DataPropertyName = "TenNXB";
+            this.TenNXB.HeaderText = "Tên nhà xuất bản";
+            this.TenNXB.Name = "TenNXB";
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.Name = "DiaChi";
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "Số điện thoại";
+            this.SDT.Name = "SDT";
             // 
             // toolStrip1
             // 
@@ -245,6 +280,7 @@
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(80, 40);
             this.btnSua.Text = "Chỉnh sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // toolStripSeparator2
             // 
@@ -320,36 +356,6 @@
             this.btnReload.Text = "toolStripButton1";
             this.btnReload.ToolTipText = "tải lại trang";
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
-            // 
-            // MaNXB
-            // 
-            this.MaNXB.DataPropertyName = "MaNXB";
-            this.MaNXB.HeaderText = "Mã nhà xuất bản";
-            this.MaNXB.Name = "MaNXB";
-            // 
-            // TenNXB
-            // 
-            this.TenNXB.DataPropertyName = "TenNXB";
-            this.TenNXB.HeaderText = "Tên nhà xuất bản";
-            this.TenNXB.Name = "TenNXB";
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa chỉ";
-            this.DiaChi.Name = "DiaChi";
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SDT";
-            this.SDT.HeaderText = "Số điện thoại";
-            this.SDT.Name = "SDT";
             // 
             // NXB
             // 
