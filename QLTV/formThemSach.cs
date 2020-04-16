@@ -141,7 +141,6 @@ namespace QLTV
                 string maTL = Form1.getStringFromDB(query);
                 //Insert dòng tương ứng vào database
                 query = "Insert into Sach values (" + maSach + ", N'" + tenSach + "'," + maTL + "," + maKe + "," + maNXB + "," + maTG + ",'" + namXB + "'," + soLuong + ")";
-                MessageBox.Show(query);
                 Form1.executeQuery(query);
                 //Update số lượng sách vào kệ sách
                 query = "Select SLSach from Ke where MaKe = " + maKe;
