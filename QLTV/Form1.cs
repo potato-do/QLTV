@@ -58,7 +58,7 @@ namespace QLTV
 
         private void bunifuImageButton4_Click(object sender, EventArgs e)
         {
-            showbutton(panelQL);
+            
         }
 //kết thúc dropdown
 //đóng mở panel menu
@@ -166,11 +166,15 @@ namespace QLTV
         }
         private void btnTheoDoi_Click(object sender, EventArgs e)
         {
+            this.panelMain.Controls.Clear();
+            theoDoiMuonTra theoDoi = new theoDoiMuonTra();
+            this.panelMain.Controls.Add(theoDoi);
+            btnCloseM_Click(sender, e);
             hidebutton();
         }
         private void btnMoRongQL_click(object sender, EventArgs e)
         {
-
+            showbutton(panelQL);
         }
 
         private void btnTongQuan_Click(object sender, EventArgs e)

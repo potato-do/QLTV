@@ -140,6 +140,12 @@
     <Compile Include="themThanhVien.Designer.cs">
       <DependentUpon>themThanhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="theoDoiMuonTra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="theoDoiMuonTra.Designer.cs">
+      <DependentUpon>theoDoiMuonTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="thuvien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="themThanhVien.resx">
       <DependentUpon>themThanhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="theoDoiMuonTra.resx">
+      <DependentUpon>theoDoiMuonTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="thuvien.resx">
       <DependentUpon>thuvien.cs</DependentUpon>
