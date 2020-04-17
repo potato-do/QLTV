@@ -200,8 +200,6 @@ namespace QLTV
         }
 
 
-
-
         // Đổ dữ liệu ra datagridview
         public static void renderData(string query, DataGridView dgv)
         {
