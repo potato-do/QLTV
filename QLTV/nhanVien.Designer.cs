@@ -54,14 +54,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtTenDN = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.MaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.website = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SLSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDangNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
@@ -79,6 +79,7 @@
             this.btnReload.Size = new System.Drawing.Size(23, 40);
             this.btnReload.Text = "toolStripButton1";
             this.btnReload.ToolTipText = "tải lại trang";
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // toolStripSeparator6
             // 
@@ -94,6 +95,7 @@
             // 
             this.toolStripTextBox1.AutoSize = false;
             this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Margin = new System.Windows.Forms.Padding(1, 0, 30, 0);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(300, 23);
@@ -127,6 +129,7 @@
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(64, 40);
             this.btnXoa.Text = "Xóa bỏ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // toolStripSeparator2
             // 
@@ -141,6 +144,7 @@
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(80, 40);
             this.btnSua.Text = "Chỉnh sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // toolStripSeparator1
             // 
@@ -198,10 +202,10 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaTG,
-            this.TenTG,
-            this.website,
-            this.SLSach,
+            this.MaNV,
+            this.HoTen,
+            this.GT,
+            this.NgaySinh,
             this.SDT,
             this.TenDangNhap});
             this.dataGridView1.Location = new System.Drawing.Point(52, 216);
@@ -209,6 +213,8 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtTen
             // 
@@ -252,6 +258,7 @@
             // 
             // txtMaNV
             // 
+            this.txtMaNV.Enabled = false;
             this.txtMaNV.Location = new System.Drawing.Point(232, 12);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(98, 20);
@@ -305,28 +312,6 @@
             this.panel2.Size = new System.Drawing.Size(1030, 123);
             this.panel2.TabIndex = 8;
             // 
-            // bunifuCards1
-            // 
-            this.bunifuCards1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuCards1.BorderRadius = 5;
-            this.bunifuCards1.BottomSahddow = true;
-            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(55)))), ((int)(((byte)(68)))));
-            this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCards1.Name = "bunifuCards1";
-            this.bunifuCards1.RightSahddow = true;
-            this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(1140, 680);
-            this.bunifuCards1.TabIndex = 9;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(654, 50);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 7;
-            // 
             // txtTenDN
             // 
             this.txtTenDN.Location = new System.Drawing.Point(232, 88);
@@ -343,42 +328,67 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Tên đăng nhập";
             // 
-            // MaTG
+            // dateTimePicker1
             // 
-            this.MaTG.DataPropertyName = "MaNV";
-            this.MaTG.HeaderText = "Mã nhân viên";
-            this.MaTG.Name = "MaTG";
-            this.MaTG.ReadOnly = true;
+            this.dateTimePicker1.Location = new System.Drawing.Point(654, 50);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 7;
             // 
-            // TenTG
+            // bunifuCards1
             // 
-            this.TenTG.DataPropertyName = "TenNV";
-            this.TenTG.HeaderText = "Tên Nhân Viên";
-            this.TenTG.Name = "TenTG";
-            this.TenTG.ReadOnly = true;
+            this.bunifuCards1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuCards1.BorderRadius = 5;
+            this.bunifuCards1.BottomSahddow = true;
+            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(55)))), ((int)(((byte)(68)))));
+            this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuCards1.LeftSahddow = false;
+            this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuCards1.Name = "bunifuCards1";
+            this.bunifuCards1.RightSahddow = true;
+            this.bunifuCards1.ShadowDepth = 20;
+            this.bunifuCards1.Size = new System.Drawing.Size(1140, 680);
+            this.bunifuCards1.TabIndex = 9;
+            this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint_1);
             // 
-            // website
+            // MaNV
             // 
-            this.website.DataPropertyName = "GT";
-            this.website.HeaderText = "Giới tính";
-            this.website.Name = "website";
-            this.website.ReadOnly = true;
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã nhân viên";
+            this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
             // 
-            // SLSach
+            // HoTen
             // 
-            this.SLSach.DataPropertyName = "NgaySinh";
-            this.SLSach.HeaderText = "Ngày Sinh";
-            this.SLSach.Name = "SLSach";
-            this.SLSach.ReadOnly = true;
+            this.HoTen.DataPropertyName = "HoTen";
+            this.HoTen.HeaderText = "Tên Nhân Viên";
+            this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
+            // 
+            // GT
+            // 
+            this.GT.DataPropertyName = "GT";
+            this.GT.HeaderText = "Giới tính";
+            this.GT.Name = "GT";
+            this.GT.ReadOnly = true;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.HeaderText = "Ngày Sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.ReadOnly = true;
             // 
             // SDT
             // 
+            this.SDT.DataPropertyName = "SDT";
             this.SDT.HeaderText = "Số Điện Thoại";
             this.SDT.Name = "SDT";
             this.SDT.ReadOnly = true;
             // 
             // TenDangNhap
             // 
+            this.TenDangNhap.DataPropertyName = "TenDangNhap";
             this.TenDangNhap.HeaderText = "Tên Đăng Nhập";
             this.TenDangNhap.Name = "TenDangNhap";
             this.TenDangNhap.ReadOnly = true;
@@ -419,12 +429,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaTG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn website;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SLSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDangNhap;
         private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -439,5 +443,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDangNhap;
     }
 }

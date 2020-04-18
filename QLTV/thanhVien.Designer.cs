@@ -151,6 +151,10 @@
             // cbGioiTinh
             // 
             this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Khác"});
             this.cbGioiTinh.Location = new System.Drawing.Point(264, 49);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(116, 21);
@@ -165,6 +169,7 @@
             // 
             // txtMaDG
             // 
+            this.txtMaDG.Enabled = false;
             this.txtMaDG.Location = new System.Drawing.Point(264, 10);
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.Size = new System.Drawing.Size(116, 20);
@@ -256,6 +261,7 @@
             this.btnSuaThanhVien.Name = "btnSuaThanhVien";
             this.btnSuaThanhVien.Size = new System.Drawing.Size(80, 40);
             this.btnSuaThanhVien.Text = "Chỉnh sửa";
+            this.btnSuaThanhVien.Click += new System.EventHandler(this.btnSuaThanhVien_Click);
             // 
             // toolStripSeparator1
             // 
@@ -293,6 +299,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // MaDG
             // 
