@@ -226,13 +226,14 @@
             // SL
             // 
             this.SL.DataPropertyName = "SL";
-            this.SL.HeaderText = "Số lượn mượn";
+            this.SL.HeaderText = "Số lượng mượn";
             this.SL.Name = "SL";
             this.SL.Width = 200;
             // 
             // SLCon
             // 
-            this.SLCon.HeaderText = "Số lượn còn lại";
+            this.SLCon.DataPropertyName = "SLCon";
+            this.SLCon.HeaderText = "Số lượng còn lại";
             this.SLCon.Name = "SLCon";
             this.SLCon.Width = 200;
             // 
