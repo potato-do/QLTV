@@ -177,8 +177,6 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -189,7 +187,6 @@
             this.SLCon});
             this.dataGridView1.Location = new System.Drawing.Point(55, 147);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 520);
             this.dataGridView1.TabIndex = 14;
@@ -229,14 +226,13 @@
             // SL
             // 
             this.SL.DataPropertyName = "SL";
-            this.SL.HeaderText = "Số lượng mượn";
+            this.SL.HeaderText = "Số lượn mượn";
             this.SL.Name = "SL";
             this.SL.Width = 200;
             // 
             // SLCon
             // 
-            this.SLCon.DataPropertyName = "SLCon";
-            this.SLCon.HeaderText = "Số lượng còn lại";
+            this.SLCon.HeaderText = "Số lượn còn lại";
             this.SLCon.Name = "SLCon";
             this.SLCon.Width = 200;
             // 

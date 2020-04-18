@@ -36,8 +36,6 @@
             this.dtNgayTra = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnLuu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnTra = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dtNgayMuon = new System.Windows.Forms.DateTimePicker();
@@ -51,14 +49,8 @@
             this.labelGT = new System.Windows.Forms.Label();
             this.labelMaDG = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MaMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TraSach = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -148,22 +140,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1030, 187);
             this.panel2.TabIndex = 19;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(738, 15);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 20;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(662, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 13);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Ngày mượn";
             // 
             // btnLuu
             // 
@@ -316,73 +292,28 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaMT,
-            this.TenDG,
-            this.TenNV,
-            this.NgayMuon,
-            this.MaSach,
-            this.TenSach,
-            this.TrangThai,
-            this.TraSach});
             this.dataGridView1.Location = new System.Drawing.Point(52, 207);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 431);
             this.dataGridView1.TabIndex = 20;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // MaMT
+            // dateTimePicker1
             // 
-            this.MaMT.DataPropertyName = "MaMuonTra";
-            this.MaMT.HeaderText = "Mã phiếu mượn";
-            this.MaMT.Name = "MaMT";
+            this.dateTimePicker1.Location = new System.Drawing.Point(738, 15);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 20;
             // 
-            // TenDG
+            // label5
             // 
-            this.TenDG.DataPropertyName = "TenDG";
-            this.TenDG.HeaderText = "Độc giả";
-            this.TenDG.Name = "TenDG";
-            // 
-            // TenNV
-            // 
-            this.TenNV.DataPropertyName = "TenNV";
-            this.TenNV.HeaderText = "Nhân viên";
-            this.TenNV.Name = "TenNV";
-            // 
-            // NgayMuon
-            // 
-            this.NgayMuon.DataPropertyName = "NgayMuon";
-            this.NgayMuon.HeaderText = "Ngày mượn sách";
-            this.NgayMuon.Name = "NgayMuon";
-            // 
-            // MaSach
-            // 
-            this.MaSach.DataPropertyName = "MaSach";
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.Name = "MaSach";
-            // 
-            // TenSach
-            // 
-            this.TenSach.DataPropertyName = "TenSach";
-            this.TenSach.HeaderText = "Tên sách";
-            this.TenSach.Name = "TenSach";
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng thái";
-            this.TrangThai.Name = "TrangThai";
-            // 
-            // TraSach
-            // 
-            this.TraSach.HeaderText = "Trả sách";
-            this.TraSach.Name = "TraSach";
-            this.TraSach.Text = "Trả";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(662, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Ngày mượn";
             // 
             // FormTraSach
             // 
@@ -394,7 +325,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormTraSach";
             this.Text = "FormTraSach";
-            this.Load += new System.EventHandler(this.FormTraSach_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -427,13 +357,5 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaMT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
-        private System.Windows.Forms.DataGridViewButtonColumn TraSach;
     }
 }

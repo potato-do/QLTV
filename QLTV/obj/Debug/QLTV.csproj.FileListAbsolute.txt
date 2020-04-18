@@ -88,4 +88,3 @@ C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themNhanVien.resou
 C:\Users\ADMIN\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.FormTraSach.resources
 C:\Users\ADMIN\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.nhanVien.resources
 C:\Users\ADMIN\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.themNhanVien.resources
-C:\Users\ADMIN\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.theoDoiMuonTra.resources
