@@ -29,12 +29,18 @@ namespace QLTV
         }
 
         private void muonSachForm_Load(object sender, EventArgs e)
-        {      
+        {
+            DateTime NgayMuon = DateTime.Now;
+            DateTime NgayTra = NgayMuon.AddMonths(6);
+            dtNgayMuon.Value = NgayMuon;
+            dtNgayTra.Value = NgayTra;
+            this.dtNgayTra.Enabled = false;
             loadInfo();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+
             moveData();
         }
 
@@ -96,6 +102,9 @@ namespace QLTV
             string maSach = txtMaS.Text;
             string tenSach = cbTenSach.Text;
             string ngayMuon = dtNgayMuon.Value.ToString("yyyyMMdd");
+            string ngayTra = dtNgayTra.Value.ToString("yyyyMMdd");
+           
+            
             if (maSach == "" || tenSach == "")
             {
                 MessageBox.Show("Bạn chưa nhập đủ thông tin!!");
@@ -108,6 +117,7 @@ namespace QLTV
                 dataGridView1.Rows[count].Cells[1].Value = maSach;
                 dataGridView1.Rows[count].Cells[2].Value = tenSach;
                 dataGridView1.Rows[count].Cells[3].Value = ngayMuon;
+                dataGridView1.Rows[count].Cells[4].Value = ngayTra;
                 clear();
             }
         }
@@ -151,6 +161,20 @@ namespace QLTV
                 string maSach = dataGridView1.Rows[i].Cells[1].Value.ToString();
                 query = "Insert into CTMuonTra values (" + maMT + "," + maSach + ", 'muon', '" + ngayMuon + "')";
                 Form1.executeQuery(query);
+                query = "Select soLuong from Sach where MaSach = " + maSach;
+                string soLuong = Form1.getStringFromDB(query);
+                soLuong = (Int32.Parse(soLuong) - 1).ToString();
+                query = "Update Sach set soLuong = " + soLuong + "where maSach = " + maSach;
+                Form1.executeQuery(query);
+
+
+                //trừ sách từ kệ 
+                query = "select Ke.SLSach from Sach inner join Ke on Sach.MaKe = Ke.MaKe where MaSach  = '" + dataGridView1.Rows[i].Cells[1].Value + "'";
+                int soLuongSach = (Int32.Parse(Form1.getStringFromDB(query)) - 1);
+                query = "update Ke set SLSach = " + soLuongSach + " where MaKe = ( select Sach.MaKe from Sach inner join Ke on Sach.MaKe = Ke.MaKe where MaSach ='" + dataGridView1.Rows[i].Cells[1].Value + "' )";
+                Form1.executeQuery(query);
+
+
             }
             MessageBox.Show("Thên dữ liệu thành công!!!");
         }

@@ -56,6 +56,7 @@ namespace QLTV
         private void btnSua_Click(object sender, EventArgs e)
         {
             updateData();
+            btnReload_Click(sender, e);
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -72,7 +73,7 @@ namespace QLTV
         private void loadData()
         {
             string query;
-            query = "Select * from NhanVien";
+            query = "Select MaNV,HoTen,NgaySinh,GT,SDT,NhanVien.TenDangNhap,MatKhau from NhanVien join TaiKhoan on NhanVien.TenDangNhap = TaiKhoan.TenDangNhap";
             Form1.renderData(query, dataGridView1);
         }
 
@@ -84,6 +85,7 @@ namespace QLTV
             cbGioiTinh.Text = dataGridView1.CurrentRow.Cells["GT"].Value.ToString();
             txtSDT.Text = dataGridView1.CurrentRow.Cells["SDT"].Value.ToString();
             txtTenDN.Text = dataGridView1.CurrentRow.Cells["TenDangNhap"].Value.ToString();
+            txtMK.Text = dataGridView1.CurrentRow.Cells["MatKhau"].Value.ToString();
         }
 
         //Update data vào database
@@ -95,10 +97,13 @@ namespace QLTV
             string gTinh = cbGioiTinh.Text;
             string sdt = txtSDT.Text;
             string tenDN = txtTenDN.Text;
+            string matKhau = txtMK.Text;
             string ngaySinh = dateTimePicker1.Value.ToString("yyyyMMdd");
 
             query = "Update NhanVien set HoTen = N'" + tenNV + "', GT = N'" + gTinh + "', SDT = '" + sdt + "', NgaySinh = '" + ngaySinh + "', TenDangNhap = '" + tenDN + "' where MaNV = " + maNV;
+            query = "update TaiKhoan set MatKhau = '" + matKhau + "' where TenDangNhap = '"+tenDN+"'";
             Form1.executeQuery(query);
+           // Form1.executeQuery(query);
             MessageBox.Show(query);
             MessageBox.Show("Sửa dữ liệu nhân viên thành công!!");
         }
@@ -116,6 +121,18 @@ namespace QLTV
             }
         }
 
-       
+        
+
+        private void bunifuCheckbox1_OnChange(object sender, EventArgs e)
+        {
+            if (bunifuCheckbox1.Checked)
+            {
+                txtMK.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtMK.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

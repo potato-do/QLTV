@@ -32,6 +32,8 @@
             this.btnXoa = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnThemMoiNV = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtTenDN = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -53,8 +55,6 @@
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDangNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -189,6 +189,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1030, 186);
             this.panel2.TabIndex = 16;
+            // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.Location = new System.Drawing.Point(410, 81);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(98, 20);
+            this.txtMatKhau.TabIndex = 26;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(332, 84);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Mật khẩu";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtTenDN
             // 
@@ -334,6 +351,7 @@
             this.HoTen.HeaderText = "Tên Nhân Viên";
             this.HoTen.Name = "HoTen";
             this.HoTen.ReadOnly = true;
+            this.HoTen.Width = 200;
             // 
             // GT
             // 
@@ -360,29 +378,13 @@
             this.TenDangNhap.HeaderText = "Tên Đăng Nhập";
             this.TenDangNhap.Name = "TenDangNhap";
             this.TenDangNhap.ReadOnly = true;
+            this.TenDangNhap.Width = 200;
             // 
             // MatKhau
             // 
             this.MatKhau.HeaderText = "Mật khẩu";
             this.MatKhau.Name = "MatKhau";
             this.MatKhau.ReadOnly = true;
-            // 
-            // txtMatKhau
-            // 
-            this.txtMatKhau.Location = new System.Drawing.Point(410, 81);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(98, 20);
-            this.txtMatKhau.TabIndex = 26;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(332, 84);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Mật khẩu";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // themNhanVien
             // 

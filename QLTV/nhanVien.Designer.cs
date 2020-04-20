@@ -58,12 +58,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.txtMK = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDangNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -197,7 +201,6 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -207,10 +210,10 @@
             this.GT,
             this.NgaySinh,
             this.SDT,
-            this.TenDangNhap});
+            this.TenDangNhap,
+            this.MatKhau});
             this.dataGridView1.Location = new System.Drawing.Point(52, 216);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -218,7 +221,7 @@
             // 
             // txtTen
             // 
-            this.txtTen.Location = new System.Drawing.Point(654, 12);
+            this.txtTen.Location = new System.Drawing.Point(706, 12);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(200, 20);
             this.txtTen.TabIndex = 6;
@@ -226,7 +229,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(561, 15);
+            this.label5.Location = new System.Drawing.Point(613, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 5;
@@ -235,7 +238,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(561, 54);
+            this.label4.Location = new System.Drawing.Point(613, 54);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 3;
@@ -244,14 +247,14 @@
             // cbGioiTinh
             // 
             this.cbGioiTinh.FormattingEnabled = true;
-            this.cbGioiTinh.Location = new System.Drawing.Point(232, 50);
+            this.cbGioiTinh.Location = new System.Drawing.Point(196, 50);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(98, 21);
             this.cbGioiTinh.TabIndex = 2;
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(654, 85);
+            this.txtSDT.Location = new System.Drawing.Point(706, 85);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(200, 20);
             this.txtSDT.TabIndex = 1;
@@ -259,7 +262,7 @@
             // txtMaNV
             // 
             this.txtMaNV.Enabled = false;
-            this.txtMaNV.Location = new System.Drawing.Point(232, 12);
+            this.txtMaNV.Location = new System.Drawing.Point(196, 12);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(98, 20);
             this.txtMaNV.TabIndex = 1;
@@ -267,7 +270,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(145, 54);
+            this.label3.Location = new System.Drawing.Point(109, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 0;
@@ -276,7 +279,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(586, 88);
+            this.label2.Location = new System.Drawing.Point(613, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 0;
@@ -285,7 +288,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(145, 15);
+            this.label1.Location = new System.Drawing.Point(109, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
@@ -295,6 +298,9 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.bunifuCheckbox1);
+            this.panel2.Controls.Add(this.txtMK);
+            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.txtTenDN);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.dateTimePicker1);
@@ -314,15 +320,15 @@
             // 
             // txtTenDN
             // 
-            this.txtTenDN.Location = new System.Drawing.Point(232, 88);
+            this.txtTenDN.Location = new System.Drawing.Point(196, 88);
             this.txtTenDN.Name = "txtTenDN";
-            this.txtTenDN.Size = new System.Drawing.Size(191, 20);
+            this.txtTenDN.Size = new System.Drawing.Size(98, 20);
             this.txtTenDN.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(136, 91);
+            this.label6.Location = new System.Drawing.Point(109, 91);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 13);
             this.label6.TabIndex = 8;
@@ -330,7 +336,8 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(654, 50);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(706, 50);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 7;
@@ -351,47 +358,82 @@
             this.bunifuCards1.TabIndex = 9;
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint_1);
             // 
+            // txtMK
+            // 
+            this.txtMK.Location = new System.Drawing.Point(375, 88);
+            this.txtMK.Name = "txtMK";
+            this.txtMK.Size = new System.Drawing.Size(98, 20);
+            this.txtMK.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(317, 91);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Mật khẩu";
+            // 
+            // bunifuCheckbox1
+            // 
+            this.bunifuCheckbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.bunifuCheckbox1.Checked = true;
+            this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
+            this.bunifuCheckbox1.Location = new System.Drawing.Point(486, 88);
+            this.bunifuCheckbox1.Name = "bunifuCheckbox1";
+            this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
+            this.bunifuCheckbox1.TabIndex = 13;
+            this.bunifuCheckbox1.OnChange += new System.EventHandler(this.bunifuCheckbox1_OnChange);
+            // 
             // MaNV
             // 
             this.MaNV.DataPropertyName = "MaNV";
             this.MaNV.HeaderText = "Mã nhân viên";
             this.MaNV.Name = "MaNV";
-            this.MaNV.ReadOnly = true;
             // 
             // HoTen
             // 
             this.HoTen.DataPropertyName = "HoTen";
             this.HoTen.HeaderText = "Tên Nhân Viên";
             this.HoTen.Name = "HoTen";
-            this.HoTen.ReadOnly = true;
+            this.HoTen.Width = 250;
             // 
             // GT
             // 
             this.GT.DataPropertyName = "GT";
             this.GT.HeaderText = "Giới tính";
             this.GT.Name = "GT";
-            this.GT.ReadOnly = true;
+            this.GT.Width = 70;
             // 
             // NgaySinh
             // 
             this.NgaySinh.DataPropertyName = "NgaySinh";
             this.NgaySinh.HeaderText = "Ngày Sinh";
             this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.ReadOnly = true;
+            this.NgaySinh.Width = 250;
             // 
             // SDT
             // 
             this.SDT.DataPropertyName = "SDT";
             this.SDT.HeaderText = "Số Điện Thoại";
             this.SDT.Name = "SDT";
-            this.SDT.ReadOnly = true;
+            this.SDT.Width = 150;
             // 
             // TenDangNhap
             // 
             this.TenDangNhap.DataPropertyName = "TenDangNhap";
             this.TenDangNhap.HeaderText = "Tên Đăng Nhập";
             this.TenDangNhap.Name = "TenDangNhap";
-            this.TenDangNhap.ReadOnly = true;
+            this.TenDangNhap.Width = 150;
+            // 
+            // MatKhau
+            // 
+            this.MatKhau.DataPropertyName = "MatKhau";
+            this.MatKhau.HeaderText = "Mật khẩu";
+            this.MatKhau.Name = "MatKhau";
+            this.MatKhau.Visible = false;
             // 
             // nhanVien
             // 
@@ -443,11 +485,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
+        private System.Windows.Forms.TextBox txtMK;
+        private System.Windows.Forms.Label label7;
+        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn GT;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDangNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MatKhau;
     }
 }

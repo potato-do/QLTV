@@ -59,8 +59,20 @@
             this.btnCloseM = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnOpenM = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lbSDM = new System.Windows.Forms.Label();
+            this.lbNhanVien = new System.Windows.Forms.Label();
+            this.lbThanhVien = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbKeSach = new System.Windows.Forms.Label();
+            this.lbThuVien = new System.Windows.Forms.Label();
+            this.lbTongQuan = new System.Windows.Forms.Label();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.transpanelMenu = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.tongquan1 = new QLTV.tongquan();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelSider.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,10 +83,12 @@
             this.panelThuVien.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelMenu.SuspendLayout();
+            this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpenM)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSider
@@ -169,7 +183,7 @@
             this.btnTheoDoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.btnTheoDoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTheoDoi.BorderRadius = 0;
-            this.btnTheoDoi.ButtonText = "Theo dõi mượn/trả";
+            this.btnTheoDoi.ButtonText = "Thông tin chi tiết";
             this.btnTheoDoi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.transpanelMenu.SetDecoration(this.btnTheoDoi, BunifuAnimatorNS.DecorationType.None);
             this.btnTheoDoi.DisabledColor = System.Drawing.Color.Gray;
@@ -193,7 +207,7 @@
             this.btnTheoDoi.selected = false;
             this.btnTheoDoi.Size = new System.Drawing.Size(213, 48);
             this.btnTheoDoi.TabIndex = 5;
-            this.btnTheoDoi.Text = "Theo dõi mượn/trả";
+            this.btnTheoDoi.Text = "Thông tin chi tiết";
             this.btnTheoDoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTheoDoi.Textcolor = System.Drawing.Color.White;
             this.btnTheoDoi.TextFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -662,6 +676,7 @@
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.tongquan1);
             this.transpanelMenu.SetDecoration(this.panelMain, BunifuAnimatorNS.DecorationType.None);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelMain.Location = new System.Drawing.Point(0, 78);
@@ -702,6 +717,15 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel6.Controls.Add(this.toolStrip1);
+            this.panel6.Controls.Add(this.lbSDM);
+            this.panel6.Controls.Add(this.lbNhanVien);
+            this.panel6.Controls.Add(this.lbThanhVien);
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.lbKeSach);
+            this.panel6.Controls.Add(this.lbThuVien);
+            this.panel6.Controls.Add(this.lbTongQuan);
             this.panel6.Controls.Add(this.bunifuImageButton2);
             this.transpanelMenu.SetDecoration(this.panel6, BunifuAnimatorNS.DecorationType.None);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -709,6 +733,109 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1138, 80);
             this.panel6.TabIndex = 1;
+            // 
+            // lbSDM
+            // 
+            this.lbSDM.AutoSize = true;
+            this.transpanelMenu.SetDecoration(this.lbSDM, BunifuAnimatorNS.DecorationType.None);
+            this.lbSDM.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSDM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.lbSDM.Location = new System.Drawing.Point(77, 18);
+            this.lbSDM.Name = "lbSDM";
+            this.lbSDM.Size = new System.Drawing.Size(182, 26);
+            this.lbSDM.TabIndex = 8;
+            this.lbSDM.Text = "Sách đang mượn";
+            this.lbSDM.Visible = false;
+            // 
+            // lbNhanVien
+            // 
+            this.lbNhanVien.AutoSize = true;
+            this.transpanelMenu.SetDecoration(this.lbNhanVien, BunifuAnimatorNS.DecorationType.None);
+            this.lbNhanVien.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.lbNhanVien.Location = new System.Drawing.Point(125, 21);
+            this.lbNhanVien.Name = "lbNhanVien";
+            this.lbNhanVien.Size = new System.Drawing.Size(115, 26);
+            this.lbNhanVien.TabIndex = 7;
+            this.lbNhanVien.Text = "Nhân viên";
+            this.lbNhanVien.Visible = false;
+            // 
+            // lbThanhVien
+            // 
+            this.lbThanhVien.AutoSize = true;
+            this.transpanelMenu.SetDecoration(this.lbThanhVien, BunifuAnimatorNS.DecorationType.None);
+            this.lbThanhVien.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThanhVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.lbThanhVien.Location = new System.Drawing.Point(117, 21);
+            this.lbThanhVien.Name = "lbThanhVien";
+            this.lbThanhVien.Size = new System.Drawing.Size(126, 26);
+            this.lbThanhVien.TabIndex = 6;
+            this.lbThanhVien.Text = "Thành viên";
+            this.lbThanhVien.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.transpanelMenu.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.label4.Location = new System.Drawing.Point(110, 21);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(149, 26);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Nhà xuất bản";
+            this.label4.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.transpanelMenu.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.label3.Location = new System.Drawing.Point(140, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 26);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Tác giả";
+            this.label3.Visible = false;
+            // 
+            // lbKeSach
+            // 
+            this.lbKeSach.AutoSize = true;
+            this.transpanelMenu.SetDecoration(this.lbKeSach, BunifuAnimatorNS.DecorationType.None);
+            this.lbKeSach.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKeSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.lbKeSach.Location = new System.Drawing.Point(125, 21);
+            this.lbKeSach.Name = "lbKeSach";
+            this.lbKeSach.Size = new System.Drawing.Size(93, 26);
+            this.lbKeSach.TabIndex = 3;
+            this.lbKeSach.Text = "Kệ sách";
+            this.lbKeSach.Visible = false;
+            // 
+            // lbThuVien
+            // 
+            this.lbThuVien.AutoSize = true;
+            this.transpanelMenu.SetDecoration(this.lbThuVien, BunifuAnimatorNS.DecorationType.None);
+            this.lbThuVien.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThuVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.lbThuVien.Location = new System.Drawing.Point(106, 21);
+            this.lbThuVien.Name = "lbThuVien";
+            this.lbThuVien.Size = new System.Drawing.Size(153, 26);
+            this.lbThuVien.TabIndex = 2;
+            this.lbThuVien.Text = "Thư viện sách";
+            this.lbThuVien.Visible = false;
+            // 
+            // lbTongQuan
+            // 
+            this.lbTongQuan.AutoSize = true;
+            this.transpanelMenu.SetDecoration(this.lbTongQuan, BunifuAnimatorNS.DecorationType.None);
+            this.lbTongQuan.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTongQuan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.lbTongQuan.Location = new System.Drawing.Point(106, 21);
+            this.lbTongQuan.Name = "lbTongQuan";
+            this.lbTongQuan.Size = new System.Drawing.Size(121, 26);
+            this.lbTongQuan.TabIndex = 1;
+            this.lbTongQuan.Text = "Tổng quan";
             // 
             // bunifuImageButton2
             // 
@@ -737,7 +864,7 @@
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.Padding = new System.Windows.Forms.Padding(0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
@@ -746,6 +873,46 @@
             animation1.TransparencyCoeff = 0F;
             this.transpanelMenu.DefaultAnimation = animation1;
             this.transpanelMenu.TimeStep = 0.04F;
+            // 
+            // tongquan1
+            // 
+            this.transpanelMenu.SetDecoration(this.tongquan1, BunifuAnimatorNS.DecorationType.None);
+            this.tongquan1.Location = new System.Drawing.Point(70, 55);
+            this.tongquan1.Name = "tongquan1";
+            this.tongquan1.Size = new System.Drawing.Size(988, 550);
+            this.tongquan1.TabIndex = 0;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.AutoSize = false;
+            this.transpanelMenu.SetDecoration(this.toolStrip1, BunifuAnimatorNS.DecorationType.None);
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(957, 18);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(91, 25);
+            this.toolStrip1.TabIndex = 9;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.đăngXuấtToolStripMenuItem});
+            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(72, 22);
+            this.toolStripButton1.Text = "hi,admin";
+            // 
+            // đăngXuấtToolStripMenuItem
+            // 
+            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // Form1
             // 
@@ -771,10 +938,14 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelMenu.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpenM)).EndInit();
             this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -811,6 +982,18 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnThuVien;
         private Bunifu.Framework.UI.BunifuFlatButton btnTheoDoi;
         private Bunifu.Framework.UI.BunifuFlatButton btnTra;
+        private tongquan tongquan1;
+        private System.Windows.Forms.Label lbTongQuan;
+        private System.Windows.Forms.Label lbThuVien;
+        private System.Windows.Forms.Label lbKeSach;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbNhanVien;
+        private System.Windows.Forms.Label lbThanhVien;
+        private System.Windows.Forms.Label lbSDM;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripSplitButton toolStripButton1;
+        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
     }
 }
 

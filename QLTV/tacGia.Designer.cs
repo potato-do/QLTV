@@ -38,9 +38,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.website = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnThem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -55,6 +52,9 @@
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.cbBoLoc = new System.Windows.Forms.ToolStripComboBox();
             this.btnReload = new System.Windows.Forms.ToolStripButton();
+            this.MaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.website = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -156,27 +156,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // MaTG
-            // 
-            this.MaTG.DataPropertyName = "MaTG";
-            this.MaTG.HeaderText = "Mã tác giả";
-            this.MaTG.Name = "MaTG";
-            this.MaTG.ReadOnly = true;
-            // 
-            // TenTG
-            // 
-            this.TenTG.DataPropertyName = "TenTG";
-            this.TenTG.HeaderText = "Tên Tác Giả";
-            this.TenTG.Name = "TenTG";
-            this.TenTG.ReadOnly = true;
-            // 
-            // website
-            // 
-            this.website.DataPropertyName = "website";
-            this.website.HeaderText = "Website";
-            this.website.Name = "website";
-            this.website.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -305,6 +284,30 @@
             this.btnReload.Text = "toolStripButton1";
             this.btnReload.ToolTipText = "tải lại trang";
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            // 
+            // MaTG
+            // 
+            this.MaTG.DataPropertyName = "MaTG";
+            this.MaTG.HeaderText = "Mã tác giả";
+            this.MaTG.Name = "MaTG";
+            this.MaTG.ReadOnly = true;
+            this.MaTG.Width = 200;
+            // 
+            // TenTG
+            // 
+            this.TenTG.DataPropertyName = "TenTG";
+            this.TenTG.HeaderText = "Tên Tác Giả";
+            this.TenTG.Name = "TenTG";
+            this.TenTG.ReadOnly = true;
+            this.TenTG.Width = 350;
+            // 
+            // website
+            // 
+            this.website.DataPropertyName = "website";
+            this.website.HeaderText = "Website";
+            this.website.Name = "website";
+            this.website.ReadOnly = true;
+            this.website.Width = 350;
             // 
             // tacGia
             // 

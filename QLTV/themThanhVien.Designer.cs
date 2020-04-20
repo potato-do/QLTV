@@ -335,6 +335,7 @@
             this.TenDG.HeaderText = "Họ và tên";
             this.TenDG.Name = "TenDG";
             this.TenDG.ReadOnly = true;
+            this.TenDG.Width = 200;
             // 
             // GT
             // 
@@ -353,12 +354,14 @@
             this.DiaChi.HeaderText = "Địa chỉ";
             this.DiaChi.Name = "DiaChi";
             this.DiaChi.ReadOnly = true;
+            this.DiaChi.Width = 150;
             // 
             // SDT
             // 
             this.SDT.HeaderText = "Số điện thoại";
             this.SDT.Name = "SDT";
             this.SDT.ReadOnly = true;
+            this.SDT.Width = 200;
             // 
             // themThanhVien
             // 

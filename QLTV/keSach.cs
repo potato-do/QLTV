@@ -119,5 +119,15 @@ namespace QLTV
             }
             toolStripTextBox1.TextBox.Clear();
         }
+        // đẩy dữ liệu ra form chitietke
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            chitietKe chitietKe = new chitietKe();
+            var adap = new SqlDataAdapter("select Ke.MaKe,Sach.MaSach,Sach.TenSach,TheLoai.TenTL,TacGia.TenTG,Sach.NamXuatBan,NhaXuatBan.TenNXB,Sach.soLuong from Sach inner join TacGia on Sach.MaTG = TacGia.MaTG inner join NhaXuatBan on NhaXuatBan.MaNXB = Sach.MaNXB inner join Ke on Sach.MaKe = Ke.MaKe inner join TheLoai on Sach.MaTL = TheLoai.MaTL where Ke.MaKe = '" + txtMaKe.Text + "'", Form1.conn);
+            var ta = new DataTable();
+            adap.Fill(ta);
+            chitietKe.dataGridView1.DataSource = ta;
+            chitietKe.ShowDialog();
+        }
     }
 }

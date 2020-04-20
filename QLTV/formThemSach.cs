@@ -125,9 +125,13 @@ namespace QLTV
                 //Lấy mã nhà xuất bản từ tên nxb
                 query = "Select MaNXB from NhaXuatBan where TenNXB = N'" + tenNXB + "'";
                 string maNXB = Form1.getStringFromDB(query);
+
+
                 //Lấy mã tác giả từ tên tác giả
                 query = "Select MaTG from TacGia where TenTG = N'" + tenTG + "'";
                 string maTG = Form1.getStringFromDB(query);
+
+
                 //Nếu tác giả chưa tồn tại trong cơ sơ dữ liệu -> insert thêm 
                 if(maTG == "")
                 {
@@ -136,18 +140,39 @@ namespace QLTV
                     query = "Insert into TacGia values (" + maTG + ", N'" + tenTG + "','')";
                     Form1.executeQuery(query);
                 }
+
+
                 //Lấy mã thể loại từ tên thể loại
                 query = "Select MaTL from TheLoai where TenTL = N'" + theLoai + "'";
                 string maTL = Form1.getStringFromDB(query);
-                //Insert dòng tương ứng vào database
-                query = "Insert into Sach values (" + maSach + ", N'" + tenSach + "'," + maTL + "," + maKe + "," + maNXB + "," + maTG + ",'" + namXB + "'," + soLuong + ")";
-                Form1.executeQuery(query);
-                //Update số lượng sách vào kệ sách
-                query = "Select SLSach from Ke where MaKe = " + maKe;
-                string soLuongSach = (Int32.Parse(Form1.getStringFromDB(query)) + Int32.Parse(soLuong)).ToString();
-                query = "Update Ke set SLSach = " + soLuongSach + "where MaKe = " + maKe;
-                Form1.executeQuery(query);
-                MessageBox.Show("Đã lưu dữ liệu thành công");
+
+                query = "select SLChua from Ke Where MaKe ='" + maKe + "'";
+                int a = Int32.Parse(Form1.getStringFromDB(query));
+                int b = Int32.Parse(soLuong);
+                if (a > b)
+                {
+                    //Insert dòng tương ứng vào database
+                    query = "Insert into Sach values (" + maSach + ", N'" + tenSach + "'," + maTL + "," + maKe + "," + maNXB + "," + maTG + ",'" + namXB + "'," + soLuong + ")";
+                    Form1.executeQuery(query);
+
+
+
+                    //Update số lượng sách vào kệ sách
+
+                    query = "Select SLSach from Ke where MaKe = " + maKe ;
+                    string soLuongSach = (Int32.Parse(Form1.getStringFromDB(query)) + Int32.Parse(soLuong)).ToString();
+                    query = "Update Ke set SLSach = " + soLuongSach + "where MaKe = " + maKe;
+                    Form1.executeQuery(query);
+                    MessageBox.Show("Đã lưu dữ liệu thành công");
+                }
+
+                else
+                {
+                    MessageBox.Show("Kệ sách đã đầy, vui lòng chọn kệ khác!!!");
+                }
+                
+
+
             }
            
 

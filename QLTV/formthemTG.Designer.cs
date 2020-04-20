@@ -263,18 +263,21 @@
             this.MaTG.HeaderText = "Mã Tác Giả";
             this.MaTG.Name = "MaTG";
             this.MaTG.ReadOnly = true;
+            this.MaTG.Width = 200;
             // 
             // TenTG
             // 
             this.TenTG.HeaderText = "Tên tác giả";
             this.TenTG.Name = "TenTG";
             this.TenTG.ReadOnly = true;
+            this.TenTG.Width = 300;
             // 
             // website
             // 
             this.website.HeaderText = "Website";
             this.website.Name = "website";
             this.website.ReadOnly = true;
+            this.website.Width = 300;
             // 
             // formthemTG
             // 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing.Printing;
 
 namespace QLTV
 {
@@ -39,7 +40,7 @@ namespace QLTV
         private void showbutton(Panel showpanel)
         {
             if (showpanel.Visible == false)
-            {
+            {   
                 hidebutton();
                 showpanel.Visible = true;
             }
@@ -67,6 +68,7 @@ namespace QLTV
         {
             if (panelSider.Width == 277)
             {
+                
                 btnCloseM.Visible = false;
                 panelSider.Visible = true;
                 panelSider.Width = 0;
@@ -79,8 +81,14 @@ namespace QLTV
         {
             if (panelSider.Width == 0)
             {
-                btnOpenM.Visible = false;
-                panelSider.Visible = false;
+                lbTongQuan.Visible = false;
+                lbThuVien.Visible = false;
+                label4.Visible = false;
+                label3.Visible = false;
+                lbThanhVien.Visible = false;
+                lbNhanVien.Visible = false;
+                lbSDM.Visible = false;
+                lbKeSach.Visible = false;
                 panelSider.Width = 277;
                 transpanelMenu.ShowSync(panelSider);
                 btnCloseM.Visible = true;
@@ -96,6 +104,15 @@ namespace QLTV
         //sự kiện click btn
         private void btn_ThemMoiThuVien_click(object sender, EventArgs e)
         {
+            lbTongQuan.Visible = false;
+            lbThuVien.Visible = false;
+            label4.Visible = false;
+            label3.Visible = false;
+            lbThanhVien.Visible = false;
+            lbNhanVien.Visible = false;
+            lbSDM.Visible = false;
+            lbKeSach.Visible = true;
+
             this.panelMain.Controls.Clear();
             keSach keSach = new keSach();
             this.panelMain.Controls.Add(keSach);
@@ -106,6 +123,14 @@ namespace QLTV
 
         private void btn_ChinhSuaThuVien_click(object sender, EventArgs e)
         {
+            lbTongQuan.Visible = false;
+            lbThuVien.Visible = false;
+            label4.Visible = false;
+            label3.Visible = true;
+            lbThanhVien.Visible = false;
+            lbNhanVien.Visible = false;
+            lbSDM.Visible = false;
+            lbKeSach.Visible = false;
             this.panelMain.Controls.Clear();
             tacGia tacGia = new tacGia();
             this.panelMain.Controls.Add(tacGia);
@@ -116,6 +141,14 @@ namespace QLTV
 
         private void btn_ThanhVien_click(object sender, EventArgs e)
         {
+            lbTongQuan.Visible = false;
+            lbThuVien.Visible = false;
+            label4.Visible = false;
+            label3.Visible = false;
+            lbThanhVien.Visible = false;
+            lbNhanVien.Visible = true;
+            lbSDM.Visible = false;
+            lbKeSach.Visible = false;
             this.panelMain.Controls.Clear();
             thanhVien tv = new thanhVien();
             this.panelMain.Controls.Add(tv);
@@ -125,6 +158,14 @@ namespace QLTV
         }
         private void btn_NXB_click(object sender, EventArgs e)
         {
+             lbTongQuan.Visible = false;
+            lbThuVien.Visible = false;
+            label4.Visible = true;
+            label3.Visible = false;
+            lbThanhVien.Visible = false;
+            lbNhanVien.Visible = false;
+            lbSDM.Visible = false;
+            lbKeSach.Visible = false;
             this.panelMain.Controls.Clear();
             NXB nxb = new NXB();
             this.panelMain.Controls.Add(nxb);
@@ -137,6 +178,14 @@ namespace QLTV
        
         private void btn_NhanVien_click(object sender, EventArgs e)
         {
+            lbTongQuan.Visible = false;
+            lbThuVien.Visible = false;
+            label4.Visible = false;
+            label3.Visible = false;
+            lbThanhVien.Visible = false;
+            lbNhanVien.Visible = true;
+            lbSDM.Visible = false;
+            lbKeSach.Visible = false;
             this.panelMain.Controls.Clear();
             nhanVien n = new nhanVien();
             this.panelMain.Controls.Add(n);
@@ -166,6 +215,14 @@ namespace QLTV
         }
         private void btnTheoDoi_Click(object sender, EventArgs e)
         {
+            lbTongQuan.Visible = false;
+            lbThuVien.Visible = false;
+            label4.Visible = false;
+            label3.Visible = false;
+            lbThanhVien.Visible = false;
+            lbNhanVien.Visible = false;
+            lbSDM.Visible = true;
+            lbKeSach.Visible = false;
             this.panelMain.Controls.Clear();
             theoDoiMuonTra theoDoi = new theoDoiMuonTra();
             this.panelMain.Controls.Add(theoDoi);
@@ -179,11 +236,32 @@ namespace QLTV
 
         private void btnTongQuan_Click(object sender, EventArgs e)
         {
-
+            lbTongQuan.Visible = true;
+            lbThuVien.Visible = false;
+            label4.Visible = false;
+            label3.Visible = false;
+            lbThanhVien.Visible = false;
+            lbNhanVien.Visible = false;
+            lbSDM.Visible = false;
+            lbKeSach.Visible = false;
+            this.panelMain.Controls.Clear();
+            tongquan1.BringToFront();
+            this.panelMain.Controls.Add(tongquan1);
+            btnCloseM_Click(sender, e);
+            hidebutton();
         }
 
         private void btnThuVien_Click(object sender, EventArgs e)
         {
+            lbTongQuan.Visible = false;
+            lbThuVien.Visible = true;
+            label4.Visible = false;
+            label3.Visible = false;
+            lbThanhVien.Visible = false;
+            lbNhanVien.Visible = false;
+            lbSDM.Visible = false;
+            lbKeSach.Visible = false;
+
             this.panelMain.Controls.Clear();
             thuvien thuvien = new thuvien();
             this.panelMain.Controls.Add(thuvien);

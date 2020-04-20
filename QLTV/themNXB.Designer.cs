@@ -302,6 +302,7 @@
             this.MaNXB.HeaderText = "Mã nhà xuất bản";
             this.MaNXB.Name = "MaNXB";
             this.MaNXB.ReadOnly = true;
+            this.MaNXB.Width = 150;
             // 
             // TenNXB
             // 
@@ -309,6 +310,7 @@
             this.TenNXB.HeaderText = "Tên nhà xuất bản";
             this.TenNXB.Name = "TenNXB";
             this.TenNXB.ReadOnly = true;
+            this.TenNXB.Width = 200;
             // 
             // DiaChi
             // 
@@ -316,6 +318,7 @@
             this.DiaChi.HeaderText = "Địa chỉ";
             this.DiaChi.Name = "DiaChi";
             this.DiaChi.ReadOnly = true;
+            this.DiaChi.Width = 200;
             // 
             // Email
             // 
@@ -323,6 +326,7 @@
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
+            this.Email.Width = 200;
             // 
             // SDT
             // 

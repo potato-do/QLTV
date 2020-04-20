@@ -51,8 +51,9 @@ namespace QLTV
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
-        {
-            deleteData();
+        {   deleteData();
+            btnReload_Click(sender, e);
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -62,8 +63,9 @@ namespace QLTV
         }
 
         private void btnSua_Click(object sender, EventArgs e)
-        {
-            updateData();
+        {   updateData();
+            btnReload_Click(sender, e);
+            
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -81,13 +83,19 @@ namespace QLTV
             DialogResult result = MessageBox.Show(message, title, btn);
             if (result == DialogResult.Yes)
             {
+
+                //Update vào bảng kệ sách ->> thêm sau
+                query = "select SLSach from Ke Where MaKe ='" + cbViTri.Text + "'";
+                int soLuongSach = (Int32.Parse(Form1.getStringFromDB(query)) - Int32.Parse(txtSL.Text));
+                query = "Update Ke set SLSach = " + soLuongSach + "where MaKe = '" + cbViTri.Text + "'";
+                Form1.executeQuery(query);
+
+
                 string maSach = dataGridView1.CurrentRow.Cells["MaSach"].Value.ToString();
                 query = "Delete CTMuonTra where MaSach = " + maSach;
                 Form1.executeQuery(query);
                 query = "Delete Sach where MaSach = " + maSach;
                 Form1.executeQuery(query);
-                //Update vào bảng kệ sách ->> thêm sau
-                query = "Update vào bảng kệ sách ->> thêm sau";
                 MessageBox.Show("Xóa dữ liệu thành công!!!");
             }
         }

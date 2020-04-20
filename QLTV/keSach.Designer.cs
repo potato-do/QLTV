@@ -92,6 +92,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // MaKe
             // 
@@ -366,7 +367,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnThem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -386,7 +386,6 @@
         private System.Windows.Forms.TextBox txtChatLieu;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSucChua;
-        private System.Windows.Forms.TextBox txtMaKe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
@@ -395,5 +394,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ChatLieu;
         private System.Windows.Forms.DataGridViewTextBoxColumn SucChua;
         private System.Windows.Forms.DataGridViewTextBoxColumn SLSach;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.TextBox txtMaKe;
     }
 }

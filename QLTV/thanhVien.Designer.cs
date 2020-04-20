@@ -54,18 +54,16 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnThemMoiThanhVien = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnReload = new System.Windows.Forms.ToolStripButton();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.MaDG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SachMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SachTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnReload = new System.Windows.Forms.ToolStripButton();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -291,69 +289,13 @@
             this.GT,
             this.NgaySinh,
             this.DiaChi,
-            this.SDT,
-            this.SachMuon,
-            this.SachTra});
+            this.SDT});
             this.dataGridView1.Location = new System.Drawing.Point(52, 216);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1030, 461);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // MaDG
-            // 
-            this.MaDG.DataPropertyName = "MaDG";
-            this.MaDG.HeaderText = "Mã độc giả";
-            this.MaDG.Name = "MaDG";
-            this.MaDG.ReadOnly = true;
-            // 
-            // HoTen
-            // 
-            this.HoTen.DataPropertyName = "HoTen";
-            this.HoTen.HeaderText = "Họ và tên";
-            this.HoTen.Name = "HoTen";
-            this.HoTen.ReadOnly = true;
-            // 
-            // GT
-            // 
-            this.GT.DataPropertyName = "GT";
-            this.GT.HeaderText = "Giới Tính";
-            this.GT.Name = "GT";
-            this.GT.ReadOnly = true;
-            // 
-            // NgaySinh
-            // 
-            this.NgaySinh.DataPropertyName = "NgaySinh";
-            this.NgaySinh.HeaderText = "Ngày sinh";
-            this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.ReadOnly = true;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "ĐịaChỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SDT";
-            this.SDT.HeaderText = "Số điện thoại";
-            this.SDT.Name = "SDT";
-            this.SDT.ReadOnly = true;
-            // 
-            // SachMuon
-            // 
-            this.SachMuon.HeaderText = "Số sách mượn";
-            this.SachMuon.Name = "SachMuon";
-            this.SachMuon.ReadOnly = true;
-            // 
-            // SachTra
-            // 
-            this.SachTra.HeaderText = "Số sách trả";
-            this.SachTra.Name = "SachTra";
-            this.SachTra.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -414,6 +356,51 @@
             this.bunifuCards1.TabIndex = 9;
             this.bunifuCards1.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
             // 
+            // MaDG
+            // 
+            this.MaDG.DataPropertyName = "MaDG";
+            this.MaDG.HeaderText = "Mã độc giả";
+            this.MaDG.Name = "MaDG";
+            this.MaDG.ReadOnly = true;
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "HoTen";
+            this.HoTen.HeaderText = "Họ và tên";
+            this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
+            this.HoTen.Width = 200;
+            // 
+            // GT
+            // 
+            this.GT.DataPropertyName = "GT";
+            this.GT.HeaderText = "Giới Tính";
+            this.GT.Name = "GT";
+            this.GT.ReadOnly = true;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.HeaderText = "Ngày sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.ReadOnly = true;
+            this.NgaySinh.Width = 200;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "ĐịaChỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "Số điện thoại";
+            this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
+            this.SDT.Width = 150;
+            // 
             // thanhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,7 +457,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SachMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SachTra;
     }
 }
