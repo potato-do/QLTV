@@ -145,8 +145,8 @@ namespace QLTV
             lbThuVien.Visible = false;
             label4.Visible = false;
             label3.Visible = false;
-            lbThanhVien.Visible = false;
-            lbNhanVien.Visible = true;
+            lbThanhVien.Visible = true;
+            lbNhanVien.Visible = false;
             lbSDM.Visible = false;
             lbKeSach.Visible = false;
             this.panelMain.Controls.Clear();
