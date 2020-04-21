@@ -269,6 +269,10 @@ namespace QLTV
             thuvien.Show();
         }
 
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
 
         //btn thoát
@@ -397,5 +401,7 @@ namespace QLTV
             }
             return stringOut;
         }
+
+        
     }
 }

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnDN = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnTK = new System.Windows.Forms.TextBox();
             this.btnMK = new System.Windows.Forms.TextBox();
+            this.btnTK = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnDN = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -54,28 +54,6 @@
             this.panel1.Size = new System.Drawing.Size(717, 390);
             this.panel1.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(79, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "library";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(90, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 38);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "management";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(55)))), ((int)(((byte)(68)))));
@@ -88,6 +66,54 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(429, 116);
             this.panel2.TabIndex = 2;
+            // 
+            // btnMK
+            // 
+            this.btnMK.Location = new System.Drawing.Point(150, 70);
+            this.btnMK.Name = "btnMK";
+            this.btnMK.Size = new System.Drawing.Size(224, 20);
+            this.btnMK.TabIndex = 2;
+            this.btnMK.UseSystemPasswordChar = true;
+            // 
+            // btnTK
+            // 
+            this.btnTK.Location = new System.Drawing.Point(150, 29);
+            this.btnTK.Name = "btnTK";
+            this.btnTK.Size = new System.Drawing.Size(224, 20);
+            this.btnTK.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(22, 68);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 21);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Mật khẩu";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(22, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 21);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Tài khoản";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(79, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "library";
             // 
             // btnDN
             // 
@@ -118,47 +144,23 @@
             this.btnDN.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(55)))), ((int)(((byte)(68)))));
             this.btnDN.selected = false;
             this.btnDN.Size = new System.Drawing.Size(106, 30);
-            this.btnDN.TabIndex = 1;
+            this.btnDN.TabIndex = 3;
             this.btnDN.Text = "Đăng nhập";
             this.btnDN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDN.Textcolor = System.Drawing.Color.White;
             this.btnDN.TextFont = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDN.Click += new System.EventHandler(this.btnDN_Click);
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(22, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tài khoản";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(22, 68);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 21);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Mật khẩu";
-            // 
-            // btnTK
-            // 
-            this.btnTK.Location = new System.Drawing.Point(150, 29);
-            this.btnTK.Name = "btnTK";
-            this.btnTK.Size = new System.Drawing.Size(224, 20);
-            this.btnTK.TabIndex = 3;
-            // 
-            // btnMK
-            // 
-            this.btnMK.Location = new System.Drawing.Point(150, 70);
-            this.btnMK.Name = "btnMK";
-            this.btnMK.Size = new System.Drawing.Size(224, 20);
-            this.btnMK.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(90, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(209, 38);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "management";
             // 
             // dangNhap
             // 
