@@ -163,3 +163,4 @@ C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\bin\Debug\zh-CHT\Microsoft.Report
 C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.chitietDangMuon.resources
+C:\Users\longn\Documents\GitHub\QLThuVien\QLTV\obj\Debug\QLTV.dangNhap.resources
